@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "DGPExtensionCore",
+        "repositoryURL": "https://daniel_ios@bitbucket.org/daniel_ios/dgpextensioncore.git",
+        "state": {
+          "branch": "master",
+          "revision": "4d20934591151ba9a22e1ff8b4b4c61455d4f8cd",
+          "version": null
+        }
+      },
+      {
+        "package": "DGPLibrary",
+        "repositoryURL": "https://daniel_ios@bitbucket.org/daniel_ios/dgplibrary.git",
+        "state": {
+          "branch": "master",
+          "revision": "279ce15f5ee8707f91432d484ce5bbc57771abe7",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
