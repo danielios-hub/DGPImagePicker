@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -21,9 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		C79B3DC42523337B00AFBBCD /* DGPLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C79B3DC32523337B00AFBBCD /* DGPLibrary */; };
-		C79B3DCB25233FF600AFBBCD /* DGPExtensionCore in Frameworks */ = {isa = PBXBuildFile; productRef = C79B3DCA25233FF600AFBBCD /* DGPExtensionCore */; };
-		C79B3DCC25233FF600AFBBCD /* DGPExtensionCore in Embed Frameworks */ = {isa = PBXBuildFile; productRef = C79B3DCA25233FF600AFBBCD /* DGPExtensionCore */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C7A44A6425221B0A005A1A83 /* DGPMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3725221B08005A1A83 /* DGPMenuView.swift */; };
 		C7A44A6525221B0B005A1A83 /* DeniedPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3925221B08005A1A83 /* DeniedPermissionView.swift */; };
 		C7A44A6625221B0B005A1A83 /* DGPImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3A25221B08005A1A83 /* DGPImagePicker.swift */; };
@@ -85,7 +82,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C79B3DCC25233FF600AFBBCD /* DGPExtensionCore in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,8 +138,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				C79B3DC42523337B00AFBBCD /* DGPLibrary in Frameworks */,
-				C79B3DCB25233FF600AFBBCD /* DGPExtensionCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,8 +339,6 @@
 			);
 			name = DGPImagePicker;
 			packageProductDependencies = (
-				C79B3DC32523337B00AFBBCD /* DGPLibrary */,
-				C79B3DCA25233FF600AFBBCD /* DGPExtensionCore */,
 			);
 			productName = DGPImagePicker;
 			productReference = "DGPImagePicker::DGPImagePicker::Product" /* DGPImagePicker.framework */;
@@ -392,8 +384,6 @@
 			);
 			mainGroup = OBJ_5;
 			packageReferences = (
-				C79B3DC22523337B00AFBBCD /* XCRemoteSwiftPackageReference "dgplibrary" */,
-				C79B3DC925233FF600AFBBCD /* XCRemoteSwiftPackageReference "dgpextensioncore" */,
 			);
 			productRefGroup = OBJ_14 /* Products */;
 			projectDirPath = "";
@@ -484,10 +474,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DGPImagePicker.xcodeproj/DGPImagePicker_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -520,10 +507,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DGPImagePicker.xcodeproj/DGPImagePicker_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -594,11 +578,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DGPImagePicker.xcodeproj/DGPImagePickerTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@loader_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -624,11 +604,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DGPImagePicker.xcodeproj/DGPImagePickerTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@loader_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -660,8 +636,7 @@
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
@@ -706,38 +681,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C79B3DC22523337B00AFBBCD /* XCRemoteSwiftPackageReference "dgplibrary" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://daniel_ios@bitbucket.org/daniel_ios/dgplibrary.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.2;
-			};
-		};
-		C79B3DC925233FF600AFBBCD /* XCRemoteSwiftPackageReference "dgpextensioncore" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://daniel_ios@bitbucket.org/daniel_ios/dgpextensioncore.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.8;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C79B3DC32523337B00AFBBCD /* DGPLibrary */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C79B3DC22523337B00AFBBCD /* XCRemoteSwiftPackageReference "dgplibrary" */;
-			productName = DGPLibrary;
-		};
-		C79B3DCA25233FF600AFBBCD /* DGPExtensionCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C79B3DC925233FF600AFBBCD /* XCRemoteSwiftPackageReference "dgpextensioncore" */;
-			productName = DGPExtensionCore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }
