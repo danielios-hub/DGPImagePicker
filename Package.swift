@@ -26,8 +26,5 @@ let package = Package(
         .target(
             name: "DGPImagePicker",
             dependencies: ["DGPLibrary", "DGPExtensionCore"]),
-        .testTarget(
-            name: "DGPImagePickerTests",
-            dependencies: ["DGPImagePicker"]),
     ]
 )

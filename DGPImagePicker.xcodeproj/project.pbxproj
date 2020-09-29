@@ -6,20 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		"DGPImagePicker::DGPImagePickerPackageTests::ProductTarget" /* DGPImagePickerPackageTests */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_32 /* Build configuration list for PBXAggregateTarget "DGPImagePickerPackageTests" */;
-			buildPhases = (
-			);
-			dependencies = (
-				OBJ_35 /* PBXTargetDependency */,
-			);
-			name = DGPImagePickerPackageTests;
-			productName = DGPImagePickerPackageTests;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		C7A44A6425221B0A005A1A83 /* DGPMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3725221B08005A1A83 /* DGPMenuView.swift */; };
 		C7A44A6525221B0B005A1A83 /* DeniedPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3925221B08005A1A83 /* DeniedPermissionView.swift */; };
@@ -53,27 +39,7 @@
 		C7A44A8125221B0B005A1A83 /* DGPAlbumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A6125221B0A005A1A83 /* DGPAlbumManager.swift */; };
 		C7A44A8225221B0B005A1A83 /* DGPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A6225221B0A005A1A83 /* DGPUtils.swift */; };
 		C7A44A8325221B0B005A1A83 /* DGPPermissionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A6325221B0A005A1A83 /* DGPPermissionCheck.swift */; };
-		OBJ_41 /* DGPImagePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* DGPImagePickerTests.swift */; };
-		OBJ_42 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
-		OBJ_44 /* DGPImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "DGPImagePicker::DGPImagePicker::Product" /* DGPImagePicker.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C7A44A3425221A18005A1A83 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "DGPImagePicker::DGPImagePicker";
-			remoteInfo = DGPImagePicker;
-		};
-		C7A44A3525221A19005A1A83 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "DGPImagePicker::DGPImagePickerTests";
-			remoteInfo = DGPImagePickerTests;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C7A44A8825221C3F005A1A83 /* Embed Frameworks */ = {
@@ -126,9 +92,6 @@
 		C7A44A6225221B0A005A1A83 /* DGPUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGPUtils.swift; sourceTree = "<group>"; };
 		C7A44A6325221B0A005A1A83 /* DGPPermissionCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGPPermissionCheck.swift; sourceTree = "<group>"; };
 		"DGPImagePicker::DGPImagePicker::Product" /* DGPImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DGPImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"DGPImagePicker::DGPImagePickerTests::Product" /* DGPImagePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = DGPImagePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_12 /* DGPImagePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGPImagePickerTests.swift; sourceTree = "<group>"; };
-		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,14 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_43 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_44 /* DGPImagePicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,29 +215,10 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		OBJ_10 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_11 /* DGPImagePickerTests */,
-			);
-			name = Tests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_11 /* DGPImagePickerTests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_12 /* DGPImagePickerTests.swift */,
-				OBJ_13 /* XCTestManifests.swift */,
-			);
-			name = DGPImagePickerTests;
-			path = Tests/DGPImagePickerTests;
-			sourceTree = SOURCE_ROOT;
-		};
 		OBJ_14 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				"DGPImagePicker::DGPImagePicker::Product" /* DGPImagePicker.framework */,
-				"DGPImagePicker::DGPImagePickerTests::Product" /* DGPImagePickerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -292,7 +228,6 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_10 /* Tests */,
 				OBJ_14 /* Products */,
 				OBJ_17 /* README.md */,
 			);
@@ -344,23 +279,6 @@
 			productReference = "DGPImagePicker::DGPImagePicker::Product" /* DGPImagePicker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		"DGPImagePicker::DGPImagePickerTests" /* DGPImagePickerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_37 /* Build configuration list for PBXNativeTarget "DGPImagePickerTests" */;
-			buildPhases = (
-				OBJ_40 /* Sources */,
-				OBJ_43 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_45 /* PBXTargetDependency */,
-			);
-			name = DGPImagePickerTests;
-			productName = DGPImagePickerTests;
-			productReference = "DGPImagePicker::DGPImagePickerTests::Product" /* DGPImagePickerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -390,8 +308,6 @@
 			projectRoot = "";
 			targets = (
 				"DGPImagePicker::DGPImagePicker" /* DGPImagePicker */,
-				"DGPImagePicker::DGPImagePickerPackageTests::ProductTarget" /* DGPImagePickerPackageTests */,
-				"DGPImagePicker::DGPImagePickerTests" /* DGPImagePickerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -436,29 +352,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_40 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_41 /* DGPImagePickerTests.swift in Sources */,
-				OBJ_42 /* XCTestManifests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		OBJ_35 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "DGPImagePicker::DGPImagePickerTests" /* DGPImagePickerTests */;
-			targetProxy = C7A44A3525221A19005A1A83 /* PBXContainerItemProxy */;
-		};
-		OBJ_45 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "DGPImagePicker::DGPImagePicker" /* DGPImagePicker */;
-			targetProxy = C7A44A3425221A18005A1A83 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		OBJ_20 /* Debug */ = {
@@ -545,77 +439,13 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USE_HEADERMAP = NO;
 			};
 			name = Debug;
-		};
-		OBJ_33 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		OBJ_34 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		OBJ_38 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = DGPImagePicker.xcodeproj/DGPImagePickerTests_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = DGPImagePickerTests;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_39 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = DGPImagePicker.xcodeproj/DGPImagePickerTests_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = DGPImagePickerTests;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
 		};
 		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -633,8 +463,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				USE_HEADERMAP = NO;
@@ -658,24 +488,6 @@
 			buildConfigurations = (
 				OBJ_3 /* Debug */,
 				OBJ_4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_32 /* Build configuration list for PBXAggregateTarget "DGPImagePickerPackageTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_33 /* Debug */,
-				OBJ_34 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_37 /* Build configuration list for PBXNativeTarget "DGPImagePickerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_38 /* Debug */,
-				OBJ_39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
