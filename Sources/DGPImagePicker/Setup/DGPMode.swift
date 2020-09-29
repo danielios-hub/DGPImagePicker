@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum DGPMode {
+public enum DGPMode {
     case library
     case camera
     case video

@@ -17,12 +17,12 @@ public struct DGPConfig {
         queueVideo.maxConcurrentOperationCount = 1
     }
     
-    var barTintColor : UIColor = .lightGray
-    var tintColor : UIColor = .systemBlue
-    let emerald = UIColor(red: 0, green: 155/255.0, blue: 119/255.0, alpha: 1)
+    public var barTintColor : UIColor = .lightGray
+    public var tintColor : UIColor = .systemBlue
+    public private(set) let emerald = UIColor(red: 0, green: 155/255.0, blue: 119/255.0, alpha: 1)
     
-    var titleColor : UIColor?
-    var screens: [DGPMode] = [.library, .camera, .video]
+    public var titleColor : UIColor?
+    public var screens: [DGPMode] = [.library, .camera, .video]
     var library = DGPLibraryConfig()
     var video = DGPCameraVideo()
     var queueVideo = OperationQueue()
