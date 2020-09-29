@@ -21,7 +21,7 @@ class DGPCameraView : UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        buttonShoot.tintColor = DGPConfig.shared.emerald
+        buttonShoot.tintColor = DGPConfig.shared.emerald()
         labelTimeVideo.layer.cornerRadius = 6
         labelTimeVideo.clipsToBounds = true
         
