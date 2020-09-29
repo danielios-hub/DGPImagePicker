@@ -24,8 +24,8 @@ public struct DGPConfig {
     }
     public var titleColor : UIColor?
     public var screens: [DGPMode] = [.library, .camera, .video]
-    var library = DGPLibraryConfig()
-    var video = DGPCameraVideo()
+    public var library = DGPLibraryConfig()
+    public var video = DGPCameraVideo()
     var queueVideo = OperationQueue()
 }
 
