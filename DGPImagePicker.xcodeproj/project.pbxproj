@@ -55,6 +55,7 @@
 		C7A44A8325221B0B005A1A83 /* DGPPermissionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A6325221B0A005A1A83 /* DGPPermissionCheck.swift */; };
 		C7A44A8625221C3F005A1A83 /* DGPExtensionCore in Frameworks */ = {isa = PBXBuildFile; productRef = C7A44A8525221C3F005A1A83 /* DGPExtensionCore */; };
 		C7A44A8725221C3F005A1A83 /* DGPExtensionCore in Embed Frameworks */ = {isa = PBXBuildFile; productRef = C7A44A8525221C3F005A1A83 /* DGPExtensionCore */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C7A44A922522274D005A1A83 /* DGPLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C7A44A912522274D005A1A83 /* DGPLibrary */; };
 		OBJ_41 /* DGPImagePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* DGPImagePickerTests.swift */; };
 		OBJ_42 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
 		OBJ_44 /* DGPImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "DGPImagePicker::DGPImagePicker::Product" /* DGPImagePicker.framework */; };
@@ -141,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				C7A44A922522274D005A1A83 /* DGPLibrary in Frameworks */,
 				C7A44A8625221C3F005A1A83 /* DGPExtensionCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +347,7 @@
 			name = DGPImagePicker;
 			packageProductDependencies = (
 				C7A44A8525221C3F005A1A83 /* DGPExtensionCore */,
+				C7A44A912522274D005A1A83 /* DGPLibrary */,
 			);
 			productName = DGPImagePicker;
 			productReference = "DGPImagePicker::DGPImagePicker::Product" /* DGPImagePicker.framework */;
@@ -391,6 +394,7 @@
 			mainGroup = OBJ_5 /*  */;
 			packageReferences = (
 				C7A44A8425221C3F005A1A83 /* XCRemoteSwiftPackageReference "dgpextensioncore" */,
+				C7A44A902522274D005A1A83 /* XCRemoteSwiftPackageReference "dgplibrary" */,
 			);
 			productRefGroup = OBJ_14 /* Products */;
 			projectDirPath = "";
@@ -713,6 +717,14 @@
 				minimumVersion = 0.1.7;
 			};
 		};
+		C7A44A902522274D005A1A83 /* XCRemoteSwiftPackageReference "dgplibrary" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://daniel_ios@bitbucket.org/daniel_ios/dgplibrary.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -720,6 +732,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C7A44A8425221C3F005A1A83 /* XCRemoteSwiftPackageReference "dgpextensioncore" */;
 			productName = DGPExtensionCore;
+		};
+		C7A44A912522274D005A1A83 /* DGPLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7A44A902522274D005A1A83 /* XCRemoteSwiftPackageReference "dgplibrary" */;
+			productName = DGPLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

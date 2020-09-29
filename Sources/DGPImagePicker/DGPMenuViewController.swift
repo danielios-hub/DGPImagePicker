@@ -12,18 +12,18 @@ protocol DGPMenuPageDelegate: class {
     func DGP_DidSelectController(_ vc: UIViewController)
 }
 
-class DGPMenuViewController: UIViewController {
+internal class DGPMenuViewController: UIViewController {
 
     weak var delegate: DGPMenuPageDelegate?
-    var controllers = [UIViewController]() { didSet { reload() } }
+    public var controllers = [UIViewController]() { didSet { reload() } }
     
-    var currentPage = 0
+    private var currentPage = 0
     
-    var currentController : UIViewController {
+    public var currentController : UIViewController {
         return controllers[currentPage]
     }
     
-    var myView: DGPMenuView {
+    private var myView: DGPMenuView {
         return view as! DGPMenuView
     }
 
@@ -37,7 +37,7 @@ class DGPMenuViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    func selectPage(_ page: Int, scrollTo: Bool, animated: Bool = true) {
+    private func selectPage(_ page: Int, scrollTo: Bool, animated: Bool = true) {
         if scrollTo {
             let x = CGFloat(page) * UIScreen.main.bounds.width
             myView.scrollView.setContentOffset(CGPoint(x: x, y: 0), animated: animated)
@@ -51,11 +51,11 @@ class DGPMenuViewController: UIViewController {
         delegate?.DGP_DidSelectController(controllers[page])
     }
     
-    func startOnPage(_ page: Int) {
+    public func startOnPage(_ page: Int) {
         selectPage(page, scrollTo: true, animated: false)
     }
     
-    func reload() {
+    public func reload() {
         let viewWidth: CGFloat = UIScreen.main.bounds.width
         let scrollableWidth: CGFloat = CGFloat(controllers.count) * CGFloat(viewWidth)
         myView.scrollView.contentSize = CGSize(width: scrollableWidth, height: 0)

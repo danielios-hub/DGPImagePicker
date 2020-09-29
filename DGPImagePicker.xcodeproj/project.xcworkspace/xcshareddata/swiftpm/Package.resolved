@@ -9,6 +9,15 @@
           "revision": "ae6b9fe2adc5af186c1c2ea2a9848a5a897ba6a4",
           "version": "0.1.7"
         }
+      },
+      {
+        "package": "DGPLibrary",
+        "repositoryURL": "https://daniel_ios@bitbucket.org/daniel_ios/dgplibrary.git",
+        "state": {
+          "branch": null,
+          "revision": "baf4a9283f7dd12f56a3cd9443149a652e89e102",
+          "version": "0.1.1"
+        }
       }
     ]
   },

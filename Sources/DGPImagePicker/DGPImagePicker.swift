@@ -8,13 +8,14 @@
 
 import UIKit
 import DGPExtensionCore
+import DGPLibrary
 
-protocol DGPImagePickerDelegate: class {
+public protocol DGPImagePickerDelegate: class {
     func DGP_ImagePickerDidSelectItems(_ DGPImagePicker: DGPImagePicker,  items: [DGPMediaType])
     func DGP_ImagePickercancel(_ DGPImagePicker: DGPImagePicker)
 }
 
-class DGPImagePicker: UINavigationController {
+public class DGPImagePicker: UINavigationController {
 
     private let picker: DGPController!
 
@@ -35,7 +36,7 @@ class DGPImagePicker: UINavigationController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         viewControllers = [picker]
     }

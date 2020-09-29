@@ -9,7 +9,9 @@
 import UIKit 
 import Photos
 
-public protocol DGPMediaType {}
+public protocol DGPMediaType {
+    var asset: PHAsset? { get }
+}
 
 public class DGPMediaPhoto : DGPMediaType {
     public var image: UIImage

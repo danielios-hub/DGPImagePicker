@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DGPLibrary
 
 class DGPLibraryViewCell: UICollectionViewCell {
 

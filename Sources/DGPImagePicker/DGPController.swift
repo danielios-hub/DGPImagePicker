@@ -8,10 +8,10 @@
 
 import UIKit
 
-class DGPController: DGPMenuViewController {
+internal class DGPController: DGPMenuViewController {
     
     weak var delegateImagePicker: DGPImagePickerDelegate?
-    var mode : DGPMode = .library
+    private var mode : DGPMode = .library
     
     private var libraryVC: DGPLibraryViewController?
     private var cameraVC: DGPCameraViewController?
@@ -80,7 +80,7 @@ class DGPController: DGPMenuViewController {
     
     //MARK: - Setup
     
-    func setTitleViewWithTitle(aTitle: String) {
+    private func setTitleViewWithTitle(aTitle: String) {
         let titleView = UIView()
         
         let label = UILabel()
@@ -143,7 +143,7 @@ class DGPController: DGPMenuViewController {
         navigationItem.titleView = titleView
     }
     
-    func setupNav() {
+    private func setupNav() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: textConstants.cancel,
                                                            style: .plain,
                                                            target: self,
