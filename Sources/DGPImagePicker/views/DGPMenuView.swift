@@ -47,7 +47,7 @@ class DGPMenuView: UIView {
 extension DGPMenuView {
     
     class func xibView() -> DGPMenuView? {
-        let myCustomView: DGPMenuView = .fromNib()
+        let myCustomView: DGPMenuView = .fromNib("DGPImagePicker")
         return myCustomView
     }
     
