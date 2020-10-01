@@ -47,8 +47,20 @@ class DGPMenuView: UIView {
 extension DGPMenuView {
     
     class func xibView() -> DGPMenuView? {
-        let myCustomView: DGPMenuView = .fromNib("DGPImagePicker")
+        let myCustomView: DGPMenuView = .fromNib2()
         return myCustomView
     }
     
+}
+
+extension UIView {
+    
+    class func fromNib2<T: UIView>(bundleID: String? = nil) -> T {
+        if let bundleID = bundleID,
+            let bundle = Bundle(identifier: bundleID) {
+            return bundle.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
+        } else {
+            return Bundle(for: T.self).loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
+        }
+    }
 }
