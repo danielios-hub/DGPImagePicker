@@ -47,8 +47,14 @@ class DGPMenuView: UIView {
 extension DGPMenuView {
     
     class func xibView() -> DGPMenuView? {
-        let myCustomView: DGPMenuView = .fromNib2()
-        return myCustomView
+        //let myCustomView: DGPMenuView = .fromNib2()
+        //return myCustomView
+        
+        let bundle = Bundle(for: DGPImagePicker.self)
+        let nib = UINib(nibName: "DGPMenuView",
+                        bundle: bundle)
+        let xibView = nib.instantiate(withOwner: self, options: nil)[0] as? DGPMenuView
+        return xibView
     }
     
 }
