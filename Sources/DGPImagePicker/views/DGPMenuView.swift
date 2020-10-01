@@ -55,6 +55,15 @@ extension DGPMenuView {
                         bundle: bundle)
         let xibView = nib.instantiate(withOwner: self, options: nil)[0] as? DGPMenuView
         return xibView
+        
+        
+//        let nib = UINib(nibName: String(describing: self), bundle: Bundle(for: type(of: self)))
+//
+//        guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else {
+//            fatalError("Failed to instantiate nib \(nib)")
+//        }
+        
+        return nil
     }
     
 }
