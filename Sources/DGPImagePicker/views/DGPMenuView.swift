@@ -1,6 +1,6 @@
 //
 //  DGPMenuView.swift
-//  SocialGaming
+//  DGPImagePicker
 //
 //  Created by Daniel Gallego Peralta on 05/07/2020.
 //  Copyright © 2020 Daniel Gallego Peralta. All rights reserved.
@@ -47,14 +47,14 @@ class DGPMenuView: UIView {
 extension DGPMenuView {
     
     class func xibView() -> DGPMenuView? {
-        //let myCustomView: DGPMenuView = .fromNib2()
-        //return myCustomView
+        let myCustomView: DGPMenuView = .fromNib3()
+        return myCustomView
         
-        let bundle = Bundle(for: DGPImagePicker.self)
-        let nib = UINib(nibName: "DGPMenuView",
-                        bundle: bundle)
-        let xibView = nib.instantiate(withOwner: self, options: nil)[0] as? DGPMenuView
-        return xibView
+//        let bundle = Bundle(for: DGPImagePicker.self)
+//        let nib = UINib(nibName: "DGPMenuView",
+//                        bundle: bundle)
+//        let xibView = nib.instantiate(withOwner: self, options: nil)[0] as? DGPMenuView
+//        return xibView
         
         
 //        let nib = UINib(nibName: String(describing: self), bundle: Bundle(for: type(of: self)))
@@ -77,5 +77,9 @@ extension UIView {
         } else {
             return Bundle(for: T.self).loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
         }
+    }
+    
+    class func fromNib3<T: UIView>() -> T {
+        return Bundle(for: T.self).loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
     }
 }
