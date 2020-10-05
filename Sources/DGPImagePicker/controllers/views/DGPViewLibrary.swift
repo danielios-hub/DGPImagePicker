@@ -27,8 +27,7 @@ class DGPViewLibrary: UIView {
         let _flowLayout = UICollectionViewFlowLayout()
 
         // edit properties here
-        _flowLayout.itemSize = CGSize(width: 98, height: 134)
-        _flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        _flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         _flowLayout.scrollDirection = UICollectionView.ScrollDirection.vertical
         _flowLayout.minimumInteritemSpacing = 0.0
         // edit properties here
@@ -74,7 +73,7 @@ class DGPViewLibrary: UIView {
             assetZoomableView.leadingAnchor.constraint(equalTo: assetViewContainer.leadingAnchor),
             assetZoomableView.trailingAnchor.constraint(equalTo: assetViewContainer.trailingAnchor),
             //aspect ratio
-            assetZoomableView.heightAnchor.constraint(equalTo: self.widthAnchor),
+            assetViewContainer.heightAnchor.constraint(equalTo: self.widthAnchor),
             
             assetViewContainer.topAnchor.constraint(equalTo: self.topAnchor),
             assetViewContainer.leadingAnchor.constraint(equalTo: self.leadingAnchor),
