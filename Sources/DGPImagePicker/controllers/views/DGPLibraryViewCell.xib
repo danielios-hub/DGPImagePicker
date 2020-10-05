@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DGPLibraryViewCell" id="gTV-IL-0wX" customClass="DGPLibraryViewCell" customModule="DGPImagePicker">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DGPLibraryViewCell" id="gTV-IL-0wX" customClass="DGPLibraryViewCell" customModule="DGPImagePicker" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="107" height="115"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="107" height="115"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
-                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEu-Yw-Z4b" customClass="Checkmark" customModule="SocialGaming" customModuleProvider="target">
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEu-Yw-Z4b" customClass="Checkmark" customModule="DGPImagePicker" customModuleProvider="target">
                         <rect key="frame" x="82" y="90" width="25" height="25"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
