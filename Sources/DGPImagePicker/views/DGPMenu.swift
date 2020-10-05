@@ -9,15 +9,38 @@ import UIKit
 
 class DGPMenu: UIView {
 
-    @IBOutlet weak var toolbar : UIToolbar!
-    @IBOutlet weak var scrollView  :UIScrollView!
+    var toolbar : UIToolbar!
+    var scrollView  :UIScrollView!
     
     let defaultHeightToolbar : CGFloat = 44
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        clipsToBounds = false
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
         setupScrollView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setup() {
+        toolbar = UIToolbar(frame: .zero)
+        scrollView = UIScrollView(frame: .zero)
+        
+        toolbar.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(scrollView)
+        addSubview(toolbar)
+        
+        NSLayoutConstraint.activate([
+            toolbar.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            scrollView.topAnchor.constraint(equalTo: self.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: toolbar.topAnchor)
+        ])
     }
     
     public func addButtons(buttonItems: [UIBarButtonItem]) {
@@ -41,44 +64,4 @@ class DGPMenu: UIView {
         scrollView.bounces = false
     }
     
-}
-
-extension DGPMenu {
-    
-    class func xibView() -> DGPMenu? {
-            let myCustomView: DGPMenu = .fromNib3()
-            return myCustomView
-            
-    //        let bundle = Bundle(for: DGPImagePicker.self)
-    //        let nib = UINib(nibName: "DGPMenu",
-    //                        bundle: bundle)
-    //        let xibView = nib.instantiate(withOwner: self, options: nil)[0] as? DGPMenu
-    //        return xibView
-            
-            
-    //        let nib = UINib(nibName: String(describing: self), bundle: Bundle(for: type(of: self)))
-    //
-    //        guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else {
-    //            fatalError("Failed to instantiate nib \(nib)")
-    //        }
-            
-            return nil
-        }
-    
-}
-
-extension UIView {
-    
-    class func fromNib2<T: UIView>(bundleID: String? = nil) -> T {
-        if let bundleID = bundleID,
-            let bundle = Bundle(identifier: bundleID) {
-            return bundle.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
-        } else {
-            return Bundle(for: T.self).loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
-        }
-    }
-    
-    class func fromNib3<T: UIView>() -> T {
-        return Bundle(for: T.self).loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
-    }
 }

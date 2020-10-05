@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C7438715252B36020022E9CA /* DGPMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7438714252B36020022E9CA /* DGPMenu.swift */; platformFilter = ios; };
-		C7438716252B3C0D0022E9CA /* DGPMenu.xib in Sources */ = {isa = PBXBuildFile; fileRef = C7438713252B34D80022E9CA /* DGPMenu.xib */; platformFilter = ios; };
 		C79B3DE225236E7400AFBBCD /* DGPLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C79B3DE125236E7400AFBBCD /* DGPLibrary */; };
 		C7A44A6525221B0B005A1A83 /* DeniedPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3925221B08005A1A83 /* DeniedPermissionView.swift */; platformFilter = ios; };
 		C7A44A6625221B0B005A1A83 /* DGPImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3A25221B08005A1A83 /* DGPImagePicker.swift */; platformFilter = ios; };
@@ -57,7 +56,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C7438713252B34D80022E9CA /* DGPMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DGPMenu.xib; sourceTree = "<group>"; };
 		C7438714252B36020022E9CA /* DGPMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGPMenu.swift; sourceTree = "<group>"; };
 		C7A44A3925221B08005A1A83 /* DeniedPermissionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeniedPermissionView.swift; sourceTree = "<group>"; };
 		C7A44A3A25221B08005A1A83 /* DGPImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGPImagePicker.swift; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				C7A44A3925221B08005A1A83 /* DeniedPermissionView.swift */,
-				C7438713252B34D80022E9CA /* DGPMenu.xib */,
 				C7438714252B36020022E9CA /* DGPMenu.swift */,
 			);
 			path = views;
@@ -322,7 +319,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				C7438716252B3C0D0022E9CA /* DGPMenu.xib in Sources */,
 				C7A44A7125221B0B005A1A83 /* DGPLibraryViewCell.swift in Sources */,
 				C7A44A6525221B0B005A1A83 /* DeniedPermissionView.swift in Sources */,
 				C7A44A8025221B0B005A1A83 /* ExtensionUIImage.swift in Sources */,

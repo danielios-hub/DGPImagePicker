@@ -28,7 +28,8 @@ internal class DGPMenuViewController: UIViewController {
     }
 
     override func loadView() {
-        view = DGPMenu.xibView()
+        view = DGPMenu(frame: .zero)
+        
         myView.scrollView.contentInsetAdjustmentBehavior = .automatic
         myView.scrollView.delegate = self
     }
