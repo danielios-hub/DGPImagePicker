@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7438715252B36020022E9CA /* DGPMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7438714252B36020022E9CA /* DGPMenu.swift */; };
 		C79B3DE225236E7400AFBBCD /* DGPLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C79B3DE125236E7400AFBBCD /* DGPLibrary */; };
-		C7A44A6425221B0A005A1A83 /* DGPMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3725221B08005A1A83 /* DGPMenuView.swift */; };
 		C7A44A6525221B0B005A1A83 /* DeniedPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3925221B08005A1A83 /* DeniedPermissionView.swift */; };
 		C7A44A6625221B0B005A1A83 /* DGPImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3A25221B08005A1A83 /* DGPImagePicker.swift */; };
 		C7A44A6725221B0B005A1A83 /* DGPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3B25221B08005A1A83 /* DGPController.swift */; };
@@ -56,8 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C7A44A3725221B08005A1A83 /* DGPMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGPMenuView.swift; sourceTree = "<group>"; };
-		C7A44A3825221B08005A1A83 /* DGPMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DGPMenuView.xib; sourceTree = "<group>"; };
+		C7438713252B34D80022E9CA /* DGPMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DGPMenu.xib; sourceTree = "<group>"; };
+		C7438714252B36020022E9CA /* DGPMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGPMenu.swift; sourceTree = "<group>"; };
 		C7A44A3925221B08005A1A83 /* DeniedPermissionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeniedPermissionView.swift; sourceTree = "<group>"; };
 		C7A44A3A25221B08005A1A83 /* DGPImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGPImagePicker.swift; sourceTree = "<group>"; };
 		C7A44A3B25221B08005A1A83 /* DGPController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGPController.swift; sourceTree = "<group>"; };
@@ -112,9 +112,9 @@
 		C7A44A3625221B08005A1A83 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				C7A44A3725221B08005A1A83 /* DGPMenuView.swift */,
-				C7A44A3825221B08005A1A83 /* DGPMenuView.xib */,
 				C7A44A3925221B08005A1A83 /* DeniedPermissionView.swift */,
+				C7438713252B34D80022E9CA /* DGPMenu.xib */,
+				C7438714252B36020022E9CA /* DGPMenu.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -347,7 +347,7 @@
 				C7A44A7F25221B0B005A1A83 /* LibraryMediaManager.swift in Sources */,
 				C7A44A6625221B0B005A1A83 /* DGPImagePicker.swift in Sources */,
 				C7A44A8125221B0B005A1A83 /* DGPAlbumManager.swift in Sources */,
-				C7A44A6425221B0A005A1A83 /* DGPMenuView.swift in Sources */,
+				C7438715252B36020022E9CA /* DGPMenu.swift in Sources */,
 				C7A44A6E25221B0B005A1A83 /* DGPLibraryViewController.swift in Sources */,
 				C7A44A7225221B0B005A1A83 /* DGPAssetZoomableView.swift in Sources */,
 				C7A44A6A25221B0B005A1A83 /* DGPCameraViewController.swift in Sources */,

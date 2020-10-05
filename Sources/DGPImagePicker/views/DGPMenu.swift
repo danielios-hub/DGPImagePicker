@@ -1,14 +1,13 @@
 //
-//  DGPMenuView.swift
+//  DGPMenu.swift
 //  DGPImagePicker
 //
-//  Created by Daniel Gallego Peralta on 05/07/2020.
-//  Copyright © 2020 Daniel Gallego Peralta. All rights reserved.
+//  Created by Daniel Gallego Peralta on 05/10/2020.
 //
 
 import UIKit
 
-class DGPMenuView: UIView {
+class DGPMenu: UIView {
 
     @IBOutlet weak var toolbar : UIToolbar!
     @IBOutlet weak var scrollView  :UIScrollView!
@@ -41,30 +40,30 @@ class DGPMenuView: UIView {
         scrollView.scrollsToTop = false
         scrollView.bounces = false
     }
-
+    
 }
 
-extension DGPMenuView {
+extension DGPMenu {
     
-    class func xibView() -> DGPMenuView? {
-        let myCustomView: DGPMenuView = .fromNib3()
-        return myCustomView
-        
-//        let bundle = Bundle(for: DGPImagePicker.self)
-//        let nib = UINib(nibName: "DGPMenuView",
-//                        bundle: bundle)
-//        let xibView = nib.instantiate(withOwner: self, options: nil)[0] as? DGPMenuView
-//        return xibView
-        
-        
-//        let nib = UINib(nibName: String(describing: self), bundle: Bundle(for: type(of: self)))
-//
-//        guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else {
-//            fatalError("Failed to instantiate nib \(nib)")
-//        }
-        
-        return nil
-    }
+    class func xibView() -> DGPMenu? {
+            let myCustomView: DGPMenu = .fromNib3()
+            return myCustomView
+            
+    //        let bundle = Bundle(for: DGPImagePicker.self)
+    //        let nib = UINib(nibName: "DGPMenu",
+    //                        bundle: bundle)
+    //        let xibView = nib.instantiate(withOwner: self, options: nil)[0] as? DGPMenu
+    //        return xibView
+            
+            
+    //        let nib = UINib(nibName: String(describing: self), bundle: Bundle(for: type(of: self)))
+    //
+    //        guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else {
+    //            fatalError("Failed to instantiate nib \(nib)")
+    //        }
+            
+            return nil
+        }
     
 }
 

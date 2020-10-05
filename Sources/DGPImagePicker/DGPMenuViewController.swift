@@ -23,12 +23,12 @@ internal class DGPMenuViewController: UIViewController {
         return controllers[currentPage]
     }
     
-    private var myView: DGPMenuView {
-        return view as! DGPMenuView
+    private var myView: DGPMenu {
+        return view as! DGPMenu
     }
 
     override func loadView() {
-        view = DGPMenuView.xibView()
+        view = DGPMenu.xibView()
         myView.scrollView.contentInsetAdjustmentBehavior = .automatic
         myView.scrollView.delegate = self
     }
