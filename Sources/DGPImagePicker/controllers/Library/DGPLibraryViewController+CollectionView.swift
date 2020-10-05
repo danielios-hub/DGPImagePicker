@@ -13,7 +13,7 @@ extension DGPLibraryViewController {
     func setupCollectionView() {
         v.collectionView.delegate = self
         v.collectionView.dataSource = self
-        v.collectionView.register(UINib(nibName: DGPLibraryViewCell.returnID(), bundle: nil), forCellWithReuseIdentifier: DGPLibraryViewCell.returnID())
+        v.collectionView.register(DGPLibraryViewCell.self, forCellWithReuseIdentifier: DGPLibraryViewCell.returnID())
     }
     
     

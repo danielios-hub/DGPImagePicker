@@ -11,9 +11,9 @@ import DGPLibrary
 
 class DGPLibraryViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var imageView : UIImageView!
-    @IBOutlet weak var overlayView : UIView!
-    @IBOutlet weak var checkmark : Checkmark!
+    var imageView : UIImageView!
+    var overlayView : UIView!
+    var checkmark : Checkmark!
     
     var representedAssetIdentifier: String!
     
@@ -21,10 +21,64 @@ class DGPLibraryViewCell: UICollectionViewCell {
         return "DGPLibraryViewCell"
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setup() {
+        
+        imageView = UIImageView()
+        overlayView = UIView()
+        checkmark = Checkmark()
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        overlayView.translatesAutoresizingMaskIntoConstraints = false
+        checkmark.translatesAutoresizingMaskIntoConstraints = false
+        
+        contentView.addSubview(imageView)
+        contentView.addSubview(overlayView)
+        contentView.addSubview(checkmark)
+        
+        let sizeButton : CGFloat = 25.0
+        
+        NSLayoutConstraint.activate( [
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            
+            //
+            
+            overlayView.topAnchor.constraint(equalTo: imageView.topAnchor),
+            overlayView.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
+            overlayView.trailingAnchor.constraint(equalTo: imageView.trailingAnchor),
+            overlayView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor),
+            
+            //
+            
+            checkmark.widthAnchor.constraint(equalToConstant: sizeButton),
+            checkmark.heightAnchor.constraint(equalToConstant: sizeButton),
+            checkmark.trailingAnchor.constraint(equalTo: imageView.trailingAnchor),
+            checkmark.bottomAnchor.constraint(equalTo: imageView.bottomAnchor),
+            
+            
+        ])
+        
+        addSubview(imageView)
+        addSubview(overlayView)
+        
         overlayView.alpha = 0
         imageView.contentMode = .scaleAspectFill
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
     }
     
     override var isSelected: Bool {
