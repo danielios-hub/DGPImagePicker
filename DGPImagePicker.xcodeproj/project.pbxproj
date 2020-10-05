@@ -11,7 +11,7 @@
 		C7438718252B4C350022E9CA /* DGPCameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A44A4325221B09005A1A83 /* DGPCameraView.xib */; };
 		C7438719252B4CAF0022E9CA /* DGPViewLibrary.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A44A4A25221B09005A1A83 /* DGPViewLibrary.xib */; };
 		C743871A252B4CC70022E9CA /* DGPLibraryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A44A4925221B09005A1A83 /* DGPLibraryViewCell.xib */; };
-		C79B3DE225236E7400AFBBCD /* DGPLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C79B3DE125236E7400AFBBCD /* DGPLibrary */; };
+		C79B3DE225236E7400AFBBCD /* DGPLibrary in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = C79B3DE125236E7400AFBBCD /* DGPLibrary */; };
 		C7A44A6525221B0B005A1A83 /* DeniedPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3925221B08005A1A83 /* DeniedPermissionView.swift */; platformFilter = ios; };
 		C7A44A6625221B0B005A1A83 /* DGPImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3A25221B08005A1A83 /* DGPImagePicker.swift */; platformFilter = ios; };
 		C7A44A6725221B0B005A1A83 /* DGPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3B25221B08005A1A83 /* DGPController.swift */; platformFilter = ios; };

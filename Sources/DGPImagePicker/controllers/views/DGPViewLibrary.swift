@@ -80,6 +80,11 @@ class DGPViewLibrary: UIView {
 
 extension DGPViewLibrary {
     class func xibView() -> DGPViewLibrary? {
-        return Bundle(for: DGPViewLibrary.self).loadNibNamed(String(describing: DGPViewLibrary.self), owner: nil, options: nil)![0] as? DGPViewLibrary
+        let bundle = Bundle(for: DGPLibraryViewController.self)
+        let nib = UINib(nibName: "DGPViewLibrary",
+                        bundle: bundle)
+        let xibView = nib.instantiate(withOwner: self, options: nil)[0] as? DGPViewLibrary
+        return xibView
+        //return Bundle(for: DGPViewLibrary.self).loadNibNamed(String(describing: DGPViewLibrary.self), owner: nil, options: nil)![0] as? DGPViewLibrary
     }
 }
