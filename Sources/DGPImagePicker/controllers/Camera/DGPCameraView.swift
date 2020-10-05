@@ -10,17 +10,93 @@ import UIKit
 
 class DGPCameraView : UIView {
     
-    @IBOutlet weak var previewContainer : UIView!
-    @IBOutlet weak var buttonsContainer: UIView!
+    var previewContainer : UIView!
+    var buttonsContainer: UIView!
     
-    @IBOutlet weak var buttonFlash : UIButton!
-    @IBOutlet weak var buttonRotate: UIButton!
-    @IBOutlet weak var buttonShoot: UIButton!
+    var buttonFlash : UIButton!
+    var buttonRotate: UIButton!
+    var buttonShoot: UIButton!
     
-    @IBOutlet weak var labelTimeVideo : UILabel!
+    var labelTimeVideo : UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setup() {
+        previewContainer = UIView()
+        
+        labelTimeVideo = UILabel()
+        buttonFlash = UIButton()
+        buttonRotate = UIButton()
+        
+        let containerButton = UIView()
+        buttonShoot = UIButton()
+        
+        previewContainer.translatesAutoresizingMaskIntoConstraints = false
+        labelTimeVideo.translatesAutoresizingMaskIntoConstraints = false
+        buttonFlash.translatesAutoresizingMaskIntoConstraints = false
+        buttonRotate.translatesAutoresizingMaskIntoConstraints = false
+        containerButton.translatesAutoresizingMaskIntoConstraints = false
+        buttonShoot.translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(previewContainer)
+        addSubview(labelTimeVideo)
+        addSubview(buttonFlash)
+        addSubview(buttonRotate)
+        containerButton.addSubview(buttonShoot)
+        addSubview(containerButton)
+        
+        let sizeButton : CGFloat = 30.0
+        let sizeShoot : CGFloat = 80.0
+        
+        NSLayoutConstraint.activate( [
+            previewContainer.topAnchor.constraint(equalTo: self.topAnchor),
+            previewContainer.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            previewContainer.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            previewContainer.bottomAnchor.constraint(equalTo: containerButton.topAnchor),
+            
+            //
+            
+            labelTimeVideo.heightAnchor.constraint(equalToConstant: 25.0),
+            labelTimeVideo.widthAnchor.constraint(greaterThanOrEqualToConstant: 35),
+            labelTimeVideo.topAnchor.constraint(equalTo: previewContainer.topAnchor, constant: 15),
+            labelTimeVideo.trailingAnchor.constraint(equalTo: previewContainer.trailingAnchor, constant: -15),
+            
+            //
+            
+            buttonFlash.heightAnchor.constraint(equalToConstant: sizeButton),
+            buttonFlash.widthAnchor.constraint(greaterThanOrEqualToConstant: sizeButton),
+            buttonFlash.leadingAnchor.constraint(equalTo: previewContainer.leadingAnchor, constant: 10),
+            buttonFlash.bottomAnchor.constraint(equalTo: previewContainer.bottomAnchor, constant: -10),
+            
+            //
+            
+            buttonRotate.heightAnchor.constraint(equalToConstant: sizeButton),
+            buttonRotate.widthAnchor.constraint(greaterThanOrEqualToConstant: sizeButton),
+            buttonRotate.trailingAnchor.constraint(equalTo: previewContainer.trailingAnchor, constant: -10),
+            buttonRotate.bottomAnchor.constraint(equalTo: previewContainer.bottomAnchor, constant: -10),
+            
+            //
+            
+            buttonShoot.heightAnchor.constraint(equalToConstant: sizeShoot),
+            buttonShoot.widthAnchor.constraint(greaterThanOrEqualToConstant: sizeShoot),
+            buttonShoot.centerXAnchor.constraint(equalTo: containerButton.centerXAnchor),
+            buttonShoot.centerYAnchor.constraint(equalTo: containerButton.centerYAnchor),
+            
+            //
+            
+            containerButton.heightAnchor.constraint(equalToConstant: 100),
+            containerButton.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            containerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            containerButton.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
+        
         buttonShoot.tintColor = DGPConfig.shared.emerald()
         labelTimeVideo.layer.cornerRadius = 6
         labelTimeVideo.clipsToBounds = true
@@ -52,10 +128,4 @@ class DGPCameraView : UIView {
         buttonShoot.setBackgroundImage(getButtonVideo(recording: isRecording)?.withRenderingMode(.alwaysTemplate), for: .normal)
     }
     
-}
-
-extension DGPCameraView {
-    class func xibView() -> DGPCameraView? {
-        return Bundle(for: DGPCameraView.self).loadNibNamed(String(describing: DGPCameraView.self), owner: nil, options: nil)![0] as? DGPCameraView
-    }
 }

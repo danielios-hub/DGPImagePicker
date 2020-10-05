@@ -50,7 +50,7 @@ class DGPVideoViewController: UIViewController, DGPPermissionCheck {
     // MARK: - View Lifecycle
     
     public override func loadView() {
-        v = DGPCameraView.xibView()
+        v = DGPCameraView(frame: .zero)
         view = v
     }
     
