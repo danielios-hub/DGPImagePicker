@@ -7,40 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C7438715252B36020022E9CA /* DGPMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7438714252B36020022E9CA /* DGPMenu.swift */; };
-		C7438716252B3C0D0022E9CA /* DGPMenu.xib in Sources */ = {isa = PBXBuildFile; fileRef = C7438713252B34D80022E9CA /* DGPMenu.xib */; };
+		C7438715252B36020022E9CA /* DGPMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7438714252B36020022E9CA /* DGPMenu.swift */; platformFilter = ios; };
+		C7438716252B3C0D0022E9CA /* DGPMenu.xib in Sources */ = {isa = PBXBuildFile; fileRef = C7438713252B34D80022E9CA /* DGPMenu.xib */; platformFilter = ios; };
 		C79B3DE225236E7400AFBBCD /* DGPLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C79B3DE125236E7400AFBBCD /* DGPLibrary */; };
-		C7A44A6525221B0B005A1A83 /* DeniedPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3925221B08005A1A83 /* DeniedPermissionView.swift */; };
-		C7A44A6625221B0B005A1A83 /* DGPImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3A25221B08005A1A83 /* DGPImagePicker.swift */; };
-		C7A44A6725221B0B005A1A83 /* DGPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3B25221B08005A1A83 /* DGPController.swift */; };
-		C7A44A6825221B0B005A1A83 /* DGPVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3E25221B09005A1A83 /* DGPVideoViewController.swift */; };
-		C7A44A6925221B0B005A1A83 /* DGPVideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3F25221B09005A1A83 /* DGPVideoCapture.swift */; };
-		C7A44A6A25221B0B005A1A83 /* DGPCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4125221B09005A1A83 /* DGPCameraViewController.swift */; };
-		C7A44A6B25221B0B005A1A83 /* DGPPhotoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4225221B09005A1A83 /* DGPPhotoCapture.swift */; };
-		C7A44A6C25221B0B005A1A83 /* DGPCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4425221B09005A1A83 /* DGPCameraView.swift */; };
-		C7A44A6D25221B0B005A1A83 /* DGPLibraryViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4625221B09005A1A83 /* DGPLibraryViewController+CollectionView.swift */; };
-		C7A44A6E25221B0B005A1A83 /* DGPLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4725221B09005A1A83 /* DGPLibraryViewController.swift */; };
-		C7A44A6F25221B0B005A1A83 /* DGPVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4B25221B09005A1A83 /* DGPVideoView.swift */; };
-		C7A44A7025221B0B005A1A83 /* DGPAssetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4C25221B09005A1A83 /* DGPAssetContainerView.swift */; };
-		C7A44A7125221B0B005A1A83 /* DGPLibraryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4D25221B09005A1A83 /* DGPLibraryViewCell.swift */; };
-		C7A44A7225221B0B005A1A83 /* DGPAssetZoomableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4E25221B09005A1A83 /* DGPAssetZoomableView.swift */; };
-		C7A44A7325221B0B005A1A83 /* DGPViewLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4F25221B09005A1A83 /* DGPViewLibrary.swift */; };
-		C7A44A7425221B0B005A1A83 /* DGPAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5125221B09005A1A83 /* DGPAlbumView.swift */; };
-		C7A44A7525221B0B005A1A83 /* AlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5225221B09005A1A83 /* AlbumViewCell.swift */; };
-		C7A44A7625221B0B005A1A83 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5325221B09005A1A83 /* AlbumsViewController.swift */; };
-		C7A44A7725221B0B005A1A83 /* DGPConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5525221B09005A1A83 /* DGPConfig.swift */; };
-		C7A44A7825221B0B005A1A83 /* DGPMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5625221B09005A1A83 /* DGPMode.swift */; };
-		C7A44A7925221B0B005A1A83 /* DGPLibrarySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5825221B0A005A1A83 /* DGPLibrarySelection.swift */; };
-		C7A44A7A25221B0B005A1A83 /* DGPMediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5925221B0A005A1A83 /* DGPMediaType.swift */; };
-		C7A44A7B25221B0B005A1A83 /* DGPAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5A25221B0A005A1A83 /* DGPAlbum.swift */; };
-		C7A44A7C25221B0B005A1A83 /* DGPMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5B25221B0A005A1A83 /* DGPMenuViewController.swift */; };
-		C7A44A7D25221B0B005A1A83 /* ExtensionAVFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5D25221B0A005A1A83 /* ExtensionAVFoundation.swift */; };
-		C7A44A7E25221B0B005A1A83 /* ExtensionPHCachingImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5E25221B0A005A1A83 /* ExtensionPHCachingImageManager.swift */; };
-		C7A44A7F25221B0B005A1A83 /* LibraryMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5F25221B0A005A1A83 /* LibraryMediaManager.swift */; };
-		C7A44A8025221B0B005A1A83 /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A6025221B0A005A1A83 /* ExtensionUIImage.swift */; };
-		C7A44A8125221B0B005A1A83 /* DGPAlbumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A6125221B0A005A1A83 /* DGPAlbumManager.swift */; };
-		C7A44A8225221B0B005A1A83 /* DGPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A6225221B0A005A1A83 /* DGPUtils.swift */; };
-		C7A44A8325221B0B005A1A83 /* DGPPermissionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A6325221B0A005A1A83 /* DGPPermissionCheck.swift */; };
+		C7A44A6525221B0B005A1A83 /* DeniedPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3925221B08005A1A83 /* DeniedPermissionView.swift */; platformFilter = ios; };
+		C7A44A6625221B0B005A1A83 /* DGPImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3A25221B08005A1A83 /* DGPImagePicker.swift */; platformFilter = ios; };
+		C7A44A6725221B0B005A1A83 /* DGPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3B25221B08005A1A83 /* DGPController.swift */; platformFilter = ios; };
+		C7A44A6825221B0B005A1A83 /* DGPVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3E25221B09005A1A83 /* DGPVideoViewController.swift */; platformFilter = ios; };
+		C7A44A6925221B0B005A1A83 /* DGPVideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A3F25221B09005A1A83 /* DGPVideoCapture.swift */; platformFilter = ios; };
+		C7A44A6A25221B0B005A1A83 /* DGPCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4125221B09005A1A83 /* DGPCameraViewController.swift */; platformFilter = ios; };
+		C7A44A6B25221B0B005A1A83 /* DGPPhotoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4225221B09005A1A83 /* DGPPhotoCapture.swift */; platformFilter = ios; };
+		C7A44A6C25221B0B005A1A83 /* DGPCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4425221B09005A1A83 /* DGPCameraView.swift */; platformFilter = ios; };
+		C7A44A6D25221B0B005A1A83 /* DGPLibraryViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4625221B09005A1A83 /* DGPLibraryViewController+CollectionView.swift */; platformFilter = ios; };
+		C7A44A6E25221B0B005A1A83 /* DGPLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4725221B09005A1A83 /* DGPLibraryViewController.swift */; platformFilter = ios; };
+		C7A44A6F25221B0B005A1A83 /* DGPVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4B25221B09005A1A83 /* DGPVideoView.swift */; platformFilter = ios; };
+		C7A44A7025221B0B005A1A83 /* DGPAssetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4C25221B09005A1A83 /* DGPAssetContainerView.swift */; platformFilter = ios; };
+		C7A44A7125221B0B005A1A83 /* DGPLibraryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4D25221B09005A1A83 /* DGPLibraryViewCell.swift */; platformFilter = ios; };
+		C7A44A7225221B0B005A1A83 /* DGPAssetZoomableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4E25221B09005A1A83 /* DGPAssetZoomableView.swift */; platformFilter = ios; };
+		C7A44A7325221B0B005A1A83 /* DGPViewLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A4F25221B09005A1A83 /* DGPViewLibrary.swift */; platformFilter = ios; };
+		C7A44A7425221B0B005A1A83 /* DGPAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5125221B09005A1A83 /* DGPAlbumView.swift */; platformFilter = ios; };
+		C7A44A7525221B0B005A1A83 /* AlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5225221B09005A1A83 /* AlbumViewCell.swift */; platformFilter = ios; };
+		C7A44A7625221B0B005A1A83 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5325221B09005A1A83 /* AlbumsViewController.swift */; platformFilter = ios; };
+		C7A44A7725221B0B005A1A83 /* DGPConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5525221B09005A1A83 /* DGPConfig.swift */; platformFilter = ios; };
+		C7A44A7825221B0B005A1A83 /* DGPMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5625221B09005A1A83 /* DGPMode.swift */; platformFilter = ios; };
+		C7A44A7925221B0B005A1A83 /* DGPLibrarySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5825221B0A005A1A83 /* DGPLibrarySelection.swift */; platformFilter = ios; };
+		C7A44A7A25221B0B005A1A83 /* DGPMediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5925221B0A005A1A83 /* DGPMediaType.swift */; platformFilter = ios; };
+		C7A44A7B25221B0B005A1A83 /* DGPAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5A25221B0A005A1A83 /* DGPAlbum.swift */; platformFilter = ios; };
+		C7A44A7C25221B0B005A1A83 /* DGPMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5B25221B0A005A1A83 /* DGPMenuViewController.swift */; platformFilter = ios; };
+		C7A44A7D25221B0B005A1A83 /* ExtensionAVFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5D25221B0A005A1A83 /* ExtensionAVFoundation.swift */; platformFilter = ios; };
+		C7A44A7E25221B0B005A1A83 /* ExtensionPHCachingImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5E25221B0A005A1A83 /* ExtensionPHCachingImageManager.swift */; platformFilter = ios; };
+		C7A44A7F25221B0B005A1A83 /* LibraryMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A5F25221B0A005A1A83 /* LibraryMediaManager.swift */; platformFilter = ios; };
+		C7A44A8025221B0B005A1A83 /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A6025221B0A005A1A83 /* ExtensionUIImage.swift */; platformFilter = ios; };
+		C7A44A8125221B0B005A1A83 /* DGPAlbumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A6125221B0A005A1A83 /* DGPAlbumManager.swift */; platformFilter = ios; };
+		C7A44A8225221B0B005A1A83 /* DGPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A6225221B0A005A1A83 /* DGPUtils.swift */; platformFilter = ios; };
+		C7A44A8325221B0B005A1A83 /* DGPPermissionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A44A6325221B0A005A1A83 /* DGPPermissionCheck.swift */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
