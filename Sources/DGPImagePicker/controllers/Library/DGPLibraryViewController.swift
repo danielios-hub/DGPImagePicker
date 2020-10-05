@@ -40,7 +40,7 @@ class DGPLibraryViewController: UIViewController, DGPPermissionCheck {
     }
     
     public override func loadView() {
-        v = DGPViewLibrary.xibView()
+        v = DGPViewLibrary(frame: .zero)
         view = v
     }
     

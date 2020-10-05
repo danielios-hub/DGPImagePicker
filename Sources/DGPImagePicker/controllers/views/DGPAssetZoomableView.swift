@@ -36,9 +36,21 @@ class DGPAssetZoomableView: UIScrollView {
     
     //MARK: - Life cicle
     
-    required init?(coder aDecoder: NSCoder){
-        super.init(coder: aDecoder)!
-        
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        assetDelegate?.assetZoomableDidLayoutSubviews(self)
+    }
+    
+    private func setup() {
         frame.size = .zero
         clipsToBounds = true
         photoImageView.frame = .zero
@@ -51,11 +63,6 @@ class DGPAssetZoomableView: UIScrollView {
         alwaysBounceVertical = true
         alwaysBounceHorizontal = true
         isScrollEnabled = true
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        assetDelegate?.assetZoomableDidLayoutSubviews(self)
     }
     
     //MARK: - Manage scroll and image zoom

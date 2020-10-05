@@ -10,15 +10,12 @@ import UIKit
 
 class DGPViewLibrary: UIView {
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var assetZoomableView: DGPAssetZoomableView!
-    @IBOutlet weak var assetViewContainer: DGPAssetContainerView!
+    var collectionView: UICollectionView!
+    var assetZoomableView: DGPAssetZoomableView!
+    var assetViewContainer: DGPAssetContainerView!
     
-    //this for show bigger collection view when scroll
-    //@IBOutlet weak var assetViewContainerConstraintTop: NSLayoutConstraint!
-    
-    @IBOutlet weak var buttonExpand : UIButton!
-    @IBOutlet weak var buttonMultiple : UIButton!
+    var buttonExpand : UIButton!
+    var buttonMultiple : UIButton!
     
     let maxNumberWarningView = UIView()
     let maxNumberWarningLabel = UILabel()
@@ -26,12 +23,79 @@ class DGPViewLibrary: UIView {
     let line = UIView()
     var shouldShowLoader = false
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setup() {
+        assetViewContainer = DGPAssetContainerView(frame: .zero)
+        assetZoomableView = DGPAssetZoomableView(frame: .zero)
+        buttonExpand = UIButton()
+        buttonMultiple = UIButton()
+        let containerCollection = UIView()
+        collectionView = UICollectionView(frame: .zero)
+        
+        assetViewContainer.translatesAutoresizingMaskIntoConstraints = false
+        assetZoomableView.translatesAutoresizingMaskIntoConstraints = false
+        buttonExpand.translatesAutoresizingMaskIntoConstraints = false
+        buttonMultiple.translatesAutoresizingMaskIntoConstraints = false
+        containerCollection.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        assetViewContainer.addSubview(assetZoomableView)
+        addSubview(assetViewContainer)
+        addSubview(buttonExpand)
+        addSubview(buttonMultiple)
+        containerCollection.addSubview(collectionView)
+        addSubview(containerCollection)
+        
+        let sizeButton: CGFloat = 40.0
+        
+        NSLayoutConstraint.activate([
+            assetZoomableView.topAnchor.constraint(equalTo: assetViewContainer.topAnchor),
+            assetZoomableView.leadingAnchor.constraint(equalTo: assetViewContainer.leadingAnchor),
+            assetZoomableView.trailingAnchor.constraint(equalTo: assetViewContainer.trailingAnchor),
+            //aspect ratio
+            assetZoomableView.heightAnchor.constraint(equalTo: self.widthAnchor),
+            
+            assetViewContainer.topAnchor.constraint(equalTo: self.topAnchor),
+            assetViewContainer.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            assetViewContainer.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            assetViewContainer.bottomAnchor.constraint(equalTo: containerCollection.topAnchor),
+            
+            buttonExpand.widthAnchor.constraint(equalToConstant: sizeButton),
+            buttonExpand.heightAnchor.constraint(equalToConstant: sizeButton),
+            buttonExpand.leadingAnchor.constraint(equalTo: assetViewContainer.leadingAnchor, constant: 10),
+            buttonExpand.bottomAnchor.constraint(equalTo: assetViewContainer.bottomAnchor, constant: -10),
+            
+            //
+            buttonMultiple.widthAnchor.constraint(equalToConstant: sizeButton),
+            buttonMultiple.heightAnchor.constraint(equalToConstant: sizeButton),
+            buttonMultiple.leadingAnchor.constraint(equalTo: assetViewContainer.trailingAnchor, constant: -10),
+            buttonMultiple.bottomAnchor.constraint(equalTo: assetViewContainer.bottomAnchor, constant: -10),
+            
+            //
+            
+            collectionView.topAnchor.constraint(equalTo: containerCollection.topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: containerCollection.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: containerCollection.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: containerCollection.bottomAnchor),
+            
+            //
+            
+            containerCollection.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            containerCollection.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            containerCollection.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
+        
         assetViewContainer.assetZoomView = assetZoomableView
         buttonExpand.isHidden = true
         buttonMultiple.isHidden = true
-        
     }
     
     public func setupButtons() {
@@ -72,19 +136,5 @@ class DGPViewLibrary: UIView {
         let finalrect = CGRect(x: normalizedX, y: normalizedY, width: normalizedWidth, height: normalizedHeight)
         
         return finalrect
-    }
-}
-
-
-// MARK: - UI Helpers
-
-extension DGPViewLibrary {
-    class func xibView() -> DGPViewLibrary? {
-        let bundle = Bundle(for: DGPLibraryViewController.self)
-        let nib = UINib(nibName: "DGPViewLibrary",
-                        bundle: bundle)
-        let xibView = nib.instantiate(withOwner: self, options: nil)[0] as? DGPViewLibrary
-        return xibView
-        //return Bundle(for: DGPViewLibrary.self).loadNibNamed(String(describing: DGPViewLibrary.self), owner: nil, options: nil)![0] as? DGPViewLibrary
     }
 }
