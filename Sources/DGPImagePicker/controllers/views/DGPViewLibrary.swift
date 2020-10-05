@@ -23,6 +23,19 @@ class DGPViewLibrary: UIView {
     let line = UIView()
     var shouldShowLoader = false
     
+    var flowLayout: UICollectionViewFlowLayout {
+        let _flowLayout = UICollectionViewFlowLayout()
+
+        // edit properties here
+        _flowLayout.itemSize = CGSize(width: 98, height: 134)
+        _flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        _flowLayout.scrollDirection = UICollectionView.ScrollDirection.vertical
+        _flowLayout.minimumInteritemSpacing = 0.0
+        // edit properties here
+
+        return _flowLayout
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -38,8 +51,8 @@ class DGPViewLibrary: UIView {
         buttonExpand = UIButton()
         buttonMultiple = UIButton()
         let containerCollection = UIView()
-        collectionView = UICollectionView(frame: .zero)
         
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         assetViewContainer.translatesAutoresizingMaskIntoConstraints = false
         assetZoomableView.translatesAutoresizingMaskIntoConstraints = false
         buttonExpand.translatesAutoresizingMaskIntoConstraints = false
