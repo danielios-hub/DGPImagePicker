@@ -34,7 +34,7 @@ class DGPMenu: UIView {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(scrollView)
-        addSubview(stackButtons)
+        containerStack.addSubview(stackButtons)
         addSubview(containerStack)
         
         NSLayoutConstraint.activate([
