@@ -45,6 +45,7 @@ class DGPMenu: UIView {
             scrollView.bottomAnchor.constraint(equalTo: toolbar.topAnchor)
         ])
         
+        scrollView.clipsToBounds = true 
     }
     
     public func addButtons(buttonItems: [UIBarButtonItem]) {

@@ -65,7 +65,7 @@ class DGPCameraView : UIView {
             //
             
             labelTimeVideo.heightAnchor.constraint(equalToConstant: 25.0),
-            labelTimeVideo.widthAnchor.constraint(greaterThanOrEqualToConstant: 35),
+            labelTimeVideo.widthAnchor.constraint(greaterThanOrEqualToConstant: 45),
             labelTimeVideo.topAnchor.constraint(equalTo: previewContainer.topAnchor, constant: 15),
             labelTimeVideo.trailingAnchor.constraint(equalTo: previewContainer.trailingAnchor, constant: -15),
             
