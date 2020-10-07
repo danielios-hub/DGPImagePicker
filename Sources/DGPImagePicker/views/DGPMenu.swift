@@ -47,6 +47,7 @@ class DGPMenu: UIView {
         
         scrollView.clipsToBounds = true
         toolbar.barStyle = .default
+        toolbar.isTranslucent = true 
     }
     
     public func addButtons(buttonItems: [UIBarButtonItem]) {
@@ -55,7 +56,7 @@ class DGPMenu: UIView {
         let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
         for buttonItem in buttonItems {
-            buttonItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.black_midnight_light], for: .selected)
+            buttonItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor :UIColor.red], for: .selected)
             buttonItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.black], for: .normal)
             toolbar.items?.append(flexible)
             toolbar.items!.append(buttonItem)
