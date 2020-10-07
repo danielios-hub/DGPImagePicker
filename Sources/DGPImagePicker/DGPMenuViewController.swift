@@ -79,9 +79,11 @@ internal class DGPMenuViewController: UIViewController {
             viewController.didMove(toParent: self)
         }
         
-        var buttonItems : [UIBarButtonItem] = []
+        var buttonItems : [UIButton] = []
         for (index, controller) in controllers.enumerated() {
-            let button = UIBarButtonItem(title: controller.title, style: .plain, target: self, action: #selector(changeController(_:)))
+            let button = UIButton(type: .system)
+            button.setTitle(controller.title, for: .normal)
+            button.addTarget(self, action:  #selector(changeController(_:)), for: .touchDown)
             button.tag = index
             buttonItems.append(button)
         }

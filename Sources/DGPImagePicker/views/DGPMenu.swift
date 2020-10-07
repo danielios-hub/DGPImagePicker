@@ -9,7 +9,7 @@ import UIKit
 
 class DGPMenu: UIView {
 
-    var toolbar : UIToolbar!
+    var stackButtons : UIStackView!
     var scrollView  :UIScrollView!
     
     let defaultHeightToolbar : CGFloat = 44
@@ -25,43 +25,40 @@ class DGPMenu: UIView {
     }
     
     private func setup() {
-        toolbar = UIToolbar(frame: .zero)
+        stackButtons = UIStackView(frame: .zero)
         scrollView = UIScrollView(frame: .zero)
         
-        toolbar.translatesAutoresizingMaskIntoConstraints = false
+        stackButtons.translatesAutoresizingMaskIntoConstraints = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(scrollView)
-        addSubview(toolbar)
+        addSubview(stackButtons)
         
         NSLayoutConstraint.activate([
-            toolbar.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
-            toolbar.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            toolbar.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            toolbar.heightAnchor.constraint(equalToConstant: defaultHeightToolbar),
+            stackButtons.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            stackButtons.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            stackButtons.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            stackButtons.heightAnchor.constraint(equalToConstant: defaultHeightToolbar),
             scrollView.topAnchor.constraint(equalTo: self.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: toolbar.topAnchor)
+            scrollView.bottomAnchor.constraint(equalTo: stackButtons.topAnchor)
         ])
         
         scrollView.clipsToBounds = true
-        toolbar.barStyle = .default
-        toolbar.barTintColor =  UIColor.lightGray
+        
+        stackButtons.backgroundColor = .red
     }
     
-    public func addButtons(buttonItems: [UIBarButtonItem]) {
-        toolbar.items = []
-       
-        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+    public func addButtons(buttonItems: [UIButton]) {
+        stackButtons.subviews.forEach {
+            $0.removeFromSuperview()
+        }
         
         for buttonItem in buttonItems {
-            buttonItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor :UIColor.yellow], for: .highlighted)
-            buttonItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor :UIColor.red], for: .focused)
-            buttonItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.black], for: .normal)
-            toolbar.items?.append(flexible)
-            toolbar.items!.append(buttonItem)
-            toolbar.items?.append(flexible)
+            buttonItem.setTitleColor(.black, for: .focused)
+            buttonItem.setTitleColor(.lightGray, for: .normal)
+            stackButtons.addSubview(buttonItem)
         }
         
     }
