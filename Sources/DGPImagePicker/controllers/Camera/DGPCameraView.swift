@@ -101,11 +101,13 @@ class DGPCameraView : UIView {
         containerButton.backgroundColor = .white
         buttonShoot.tintColor = DGPConfig.shared.emerald()
         
-        
         labelTimeVideo.layer.cornerRadius = 6
         labelTimeVideo.clipsToBounds = true
         labelTimeVideo.textColor = .white
         labelTimeVideo.backgroundColor = .black_midnight_light
+        labelTimeVideo.textAlignment = .center
+        labelTimeVideo.font = .monospacedDigitSystemFont(ofSize: 13, weight: .medium)
+        labelTimeVideo.text = "00:00"
         labelTimeVideo.alpha = 0.9
         labelTimeVideo.isHidden = true
         

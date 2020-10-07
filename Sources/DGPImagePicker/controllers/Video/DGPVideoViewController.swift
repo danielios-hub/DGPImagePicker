@@ -152,7 +152,7 @@ extension DGPVideoViewController : DGPVideoCaptureDelegate {
     }
     
     func videoInProgress(value: Float, time: TimeInterval) {
-        v.labelTimeVideo.text = "\(Int(time))"
+        v.labelTimeVideo.text = formatTimeElapseToString(time)
     }
     
     

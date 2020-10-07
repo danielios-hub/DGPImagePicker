@@ -135,3 +135,10 @@ func indexPaths(section: Int, set: IndexSet) -> [IndexPath] {
     return indexPaths
 }
 
+func formatTimeElapseToString(_ value: TimeInterval) -> String{
+    let time = Int(value)
+    let seconds = time % 60
+    let minutes = (time / 60) % 60
+    return String(format: "%02d:%02d", minutes, seconds)
+}
+
