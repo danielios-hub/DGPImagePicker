@@ -47,6 +47,10 @@ class DGPMenu: UIView {
         
         scrollView.clipsToBounds = true
         
+        stackButtons.axis = .horizontal
+        stackButtons.distribution = .equalSpacing
+        stackButtons.alignment = .center
+        
         stackButtons.backgroundColor = .red
     }
     
@@ -58,7 +62,7 @@ class DGPMenu: UIView {
         for buttonItem in buttonItems {
             buttonItem.setTitleColor(.black, for: .focused)
             buttonItem.setTitleColor(.lightGray, for: .normal)
-            stackButtons.addSubview(buttonItem)
+            stackButtons.addArrangedSubview(buttonItem)
         }
         
     }
