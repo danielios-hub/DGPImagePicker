@@ -100,8 +100,14 @@ class DGPCameraView : UIView {
         
         containerButton.backgroundColor = .white
         buttonShoot.tintColor = DGPConfig.shared.emerald()
+        
+        
         labelTimeVideo.layer.cornerRadius = 6
         labelTimeVideo.clipsToBounds = true
+        labelTimeVideo.textColor = .white
+        labelTimeVideo.backgroundColor = .black_midnight_light
+        labelTimeVideo.alpha = 0.9
+        labelTimeVideo.isHidden = true
         
         setButtonFlipCamera()
     }

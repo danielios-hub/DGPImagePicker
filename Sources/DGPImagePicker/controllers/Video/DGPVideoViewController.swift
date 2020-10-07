@@ -148,7 +148,7 @@ class DGPVideoViewController: UIViewController, DGPPermissionCheck {
 extension DGPVideoViewController : DGPVideoCaptureDelegate {
     func didCaptureVideo(_ url: URL) {
         print("did capture video \(url.path)")
-        
+        didSelectVideo?(url)
     }
     
     func videoInProgress(value: Float, time: TimeInterval) {

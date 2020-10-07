@@ -58,7 +58,7 @@ internal class DGPController: DGPMenuViewController {
             if let vc = videoVC {
                 vc.didSelectVideo = { [weak self] url in
                     if let strongSelf = self, let nav = self?.navigationController as? DGPImagePicker {
-                        let media = DGPMediaVideo(url: url)
+                        let media = DGPMediaVideo(url: url, fromCamera: true)
                         strongSelf.delegateImagePicker?.DGP_ImagePickerDidSelectItems(nav, items: [media])
                     }
                 }
