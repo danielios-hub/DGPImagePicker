@@ -35,7 +35,7 @@ class DGPMenu: UIView {
         addSubview(toolbar)
         
         NSLayoutConstraint.activate([
-            toolbar.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            toolbar.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: 100),
             toolbar.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             toolbar.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             toolbar.heightAnchor.constraint(equalToConstant: defaultHeightToolbar),
