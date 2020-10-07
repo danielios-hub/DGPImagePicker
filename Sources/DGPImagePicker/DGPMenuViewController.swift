@@ -61,6 +61,7 @@ internal class DGPMenuViewController: UIViewController {
     }
     
     public func startOnPage(_ page: Int) {
+        currentPage = 0
         selectPage(page, scrollTo: true, animated: false)
     }
     
@@ -89,7 +90,7 @@ internal class DGPMenuViewController: UIViewController {
         
         
         for (index, controller) in controllers.enumerated() {
-            let button = UIButton(type: .system)
+            let button = UIButton(type: .custom)
             button.setTitle(controller.title, for: .normal)
             button.titleLabel?.font = .boldSystemFont(ofSize: 14)
             button.addTarget(self, action:  #selector(changeController(_:)), for: .touchDown)
