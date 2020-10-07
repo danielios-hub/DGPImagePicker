@@ -25,11 +25,7 @@ class DGPViewLibrary: UIView {
     
     var flowLayout: UICollectionViewFlowLayout {
         let _flowLayout = UICollectionViewFlowLayout()
-
-        // edit properties here
         _flowLayout.scrollDirection = UICollectionView.ScrollDirection.vertical
-        // edit properties here
-
         return _flowLayout
     }
     
@@ -108,7 +104,7 @@ class DGPViewLibrary: UIView {
         buttonExpand.isHidden = true
         buttonMultiple.isHidden = true
         
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .red
         assetViewContainer.backgroundColor = .blue
         assetZoomableView.backgroundColor = .yellow
     }

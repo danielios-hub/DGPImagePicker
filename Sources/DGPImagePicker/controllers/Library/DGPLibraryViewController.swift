@@ -42,6 +42,7 @@ class DGPLibraryViewController: UIViewController, DGPPermissionCheck {
     public override func loadView() {
         v = DGPViewLibrary(frame: .zero)
         view = v
+        v.setupButtons()
     }
     
     override func viewDidLoad() {
@@ -130,8 +131,6 @@ class DGPLibraryViewController: UIViewController, DGPPermissionCheck {
             v.assetViewContainer.setMultipleSelectionMode(on: multipleSelectionEnabled)
             v.collectionView.reloadData()
         }*/
-        
-        v.setupButtons()
     }
     
     func updateLibrary() {
