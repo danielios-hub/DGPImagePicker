@@ -71,6 +71,7 @@ class DGPLibraryViewCell: UICollectionViewCell {
         
         overlayView.alpha = 0
         imageView.contentMode = .scaleAspectFill
+        checkmark.isHidden = true 
         clipsToBounds = true
     }
     
