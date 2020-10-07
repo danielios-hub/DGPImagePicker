@@ -100,7 +100,7 @@ class DGPViewLibrary: UIView {
             
             containerCollection.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             containerCollection.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            containerCollection.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
+            containerCollection.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
         
         assetViewContainer.assetZoomView = assetZoomableView

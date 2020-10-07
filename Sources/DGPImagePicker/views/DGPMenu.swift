@@ -36,6 +36,9 @@ class DGPMenu: UIView {
         
         NSLayoutConstraint.activate([
             toolbar.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            toolbar.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            toolbar.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            toolbar.heightAnchor.constraint(equalToConstant: defaultHeightToolbar),
             scrollView.topAnchor.constraint(equalTo: self.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
