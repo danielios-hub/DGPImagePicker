@@ -25,20 +25,27 @@ class DGPMenu: UIView {
     }
     
     private func setup() {
+        let containerStack = UIView()
         stackButtons = UIStackView(frame: .zero)
         scrollView = UIScrollView(frame: .zero)
         
+        containerStack.translatesAutoresizingMaskIntoConstraints = false
         stackButtons.translatesAutoresizingMaskIntoConstraints = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(scrollView)
         addSubview(stackButtons)
+        addSubview(containerStack)
         
         NSLayoutConstraint.activate([
-            stackButtons.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
-            stackButtons.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            stackButtons.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            stackButtons.heightAnchor.constraint(equalToConstant: defaultHeightToolbar),
+            containerStack.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            containerStack.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            containerStack.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            containerStack.heightAnchor.constraint(equalToConstant: defaultHeightToolbar),
+            stackButtons.topAnchor.constraint(equalTo: containerStack.topAnchor),
+            stackButtons.leadingAnchor.constraint(equalTo: containerStack.leadingAnchor, constant: 10),
+            stackButtons.trailingAnchor.constraint(equalTo: containerStack.trailingAnchor, constant: -10),
+            stackButtons.bottomAnchor.constraint(equalTo: containerStack.bottomAnchor),
             scrollView.topAnchor.constraint(equalTo: self.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
@@ -50,8 +57,11 @@ class DGPMenu: UIView {
         stackButtons.axis = .horizontal
         stackButtons.distribution = .equalSpacing
         stackButtons.alignment = .center
+        containerStack.backgroundColor = .red
         
-        stackButtons.backgroundColor = .red
+        
+        
+       
     }
     
     public func addButtons(buttonItems: [UIButton]) {
