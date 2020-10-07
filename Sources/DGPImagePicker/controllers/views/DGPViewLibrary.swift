@@ -104,7 +104,7 @@ class DGPViewLibrary: UIView {
         buttonExpand.isHidden = true
         buttonMultiple.isHidden = true
         
-        collectionView.backgroundColor = .red
+        collectionView.backgroundColor = .white
         
         setupButtons()
     }
