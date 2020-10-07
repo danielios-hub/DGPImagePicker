@@ -97,6 +97,7 @@ class DGPCameraView : UIView {
             containerButton.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
         
+        containerButton.backgroundColor = .white 
         buttonShoot.tintColor = DGPConfig.shared.emerald()
         labelTimeVideo.layer.cornerRadius = 6
         labelTimeVideo.clipsToBounds = true

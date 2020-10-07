@@ -83,7 +83,7 @@ class DGPViewLibrary: UIView {
             //
             buttonMultiple.widthAnchor.constraint(equalToConstant: sizeButton),
             buttonMultiple.heightAnchor.constraint(equalToConstant: sizeButton),
-            buttonMultiple.leadingAnchor.constraint(equalTo: assetViewContainer.trailingAnchor, constant: -10),
+            buttonMultiple.trailingAnchor.constraint(equalTo: assetViewContainer.trailingAnchor, constant: -10),
             buttonMultiple.bottomAnchor.constraint(equalTo: assetViewContainer.bottomAnchor, constant: -10),
             
             //

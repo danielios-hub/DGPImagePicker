@@ -69,9 +69,9 @@ class DGPLibraryViewCell: UICollectionViewCell {
             
         ])
         
-        overlayView.alpha = 0
+        
         imageView.contentMode = .scaleAspectFill
-        checkmark.isHidden = true 
+        refreshSelection()
         clipsToBounds = true
     }
     
@@ -90,7 +90,6 @@ class DGPLibraryViewCell: UICollectionViewCell {
             checkmark.isHidden = isSelected ? false : true
             overlayView.alpha = 0
         } else {
-            
             overlayView.alpha = isSelected ? 0.6 : 0
             checkmark.isHidden = true
         }
