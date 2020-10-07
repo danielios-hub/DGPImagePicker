@@ -97,7 +97,7 @@ func getButtonCamera() -> UIImage? {
     return UIImage(symbol: .cameraCircleFill)
 }
 
-func applyDesignButtons(_ button: UIButton, showActive: Bool = false) {
+func applyDesignButtons(_ button: UIButton, showActive: Bool = false, radius: CGFloat?) {
     button.tintColor = .white
     
     if !showActive {
@@ -106,7 +106,11 @@ func applyDesignButtons(_ button: UIButton, showActive: Bool = false) {
         button.backgroundColor = .systemBlue
     }
     
-    button.layer.cornerRadius = button.frame.width / 2
+    guard let radius = radius else {
+        return
+    }
+    
+    button.layer.cornerRadius = radius
 }
 
 func adjustToContainer(view: UIView, parentContainer: UIView, heightValue: CGFloat? = nil) {

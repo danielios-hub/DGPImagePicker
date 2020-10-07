@@ -29,6 +29,8 @@ class DGPViewLibrary: UIView {
         return _flowLayout
     }
     
+    static let sizeButton: CGFloat = 40.0
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -60,8 +62,6 @@ class DGPViewLibrary: UIView {
         containerCollection.addSubview(collectionView)
         addSubview(containerCollection)
         
-        let sizeButton: CGFloat = 40.0
-        
         NSLayoutConstraint.activate([
             assetZoomableView.topAnchor.constraint(equalTo: assetViewContainer.topAnchor),
             assetZoomableView.leadingAnchor.constraint(equalTo: assetViewContainer.leadingAnchor),
@@ -75,14 +75,14 @@ class DGPViewLibrary: UIView {
             assetViewContainer.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             assetViewContainer.bottomAnchor.constraint(equalTo: containerCollection.topAnchor),
             
-            buttonExpand.widthAnchor.constraint(equalToConstant: sizeButton),
-            buttonExpand.heightAnchor.constraint(equalToConstant: sizeButton),
+            buttonExpand.widthAnchor.constraint(equalToConstant: DGPViewLibrary.sizeButton),
+            buttonExpand.heightAnchor.constraint(equalToConstant: DGPViewLibrary.sizeButton),
             buttonExpand.leadingAnchor.constraint(equalTo: assetViewContainer.leadingAnchor, constant: 10),
             buttonExpand.bottomAnchor.constraint(equalTo: assetViewContainer.bottomAnchor, constant: -10),
             
             //
-            buttonMultiple.widthAnchor.constraint(equalToConstant: sizeButton),
-            buttonMultiple.heightAnchor.constraint(equalToConstant: sizeButton),
+            buttonMultiple.widthAnchor.constraint(equalToConstant: DGPViewLibrary.sizeButton),
+            buttonMultiple.heightAnchor.constraint(equalToConstant: DGPViewLibrary.sizeButton),
             buttonMultiple.trailingAnchor.constraint(equalTo: assetViewContainer.trailingAnchor, constant: -10),
             buttonMultiple.bottomAnchor.constraint(equalTo: assetViewContainer.bottomAnchor, constant: -10),
             
@@ -105,8 +105,6 @@ class DGPViewLibrary: UIView {
         buttonMultiple.isHidden = true
         
         collectionView.backgroundColor = .red
-        assetViewContainer.backgroundColor = .blue
-        assetZoomableView.backgroundColor = .yellow
         
         setupButtons()
     }
@@ -115,7 +113,7 @@ class DGPViewLibrary: UIView {
         let config = DGPConfig.shared.library
         if !config.onlySquare {
             buttonExpand.setImage(UIImage(symbol: .rectangleExpandVertical), for: .normal)
-            applyDesignButtons(buttonExpand)
+            applyDesignButtons(buttonExpand, radius: DGPViewLibrary.sizeButton / 2)
             buttonExpand.isHidden = false
         } else {
             buttonExpand.isHidden = true
@@ -128,7 +126,7 @@ class DGPViewLibrary: UIView {
         let config = DGPConfig.shared.library
         if config.multipleSelectionAllowed {
             buttonMultiple.setImage(UIImage(symbol: .plus), for: .normal)
-            applyDesignButtons(buttonMultiple, showActive: config.multipleSelectionActive)
+            applyDesignButtons(buttonMultiple, showActive: config.multipleSelectionActive, radius: DGPViewLibrary.sizeButton / 2)
             buttonMultiple.isHidden = false
         } else {
             buttonMultiple.isHidden = true

@@ -19,6 +19,8 @@ class DGPCameraView : UIView {
     
     var labelTimeVideo : UILabel!
     
+    static let sizeButton : CGFloat = 30.0
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -52,7 +54,6 @@ class DGPCameraView : UIView {
         containerButton.addSubview(buttonShoot)
         addSubview(containerButton)
         
-        let sizeButton : CGFloat = 30.0
         let sizeShoot : CGFloat = 80.0
         
         NSLayoutConstraint.activate( [
@@ -70,15 +71,15 @@ class DGPCameraView : UIView {
             
             //
             
-            buttonFlash.heightAnchor.constraint(equalToConstant: sizeButton),
-            buttonFlash.widthAnchor.constraint(greaterThanOrEqualToConstant: sizeButton),
+            buttonFlash.heightAnchor.constraint(equalToConstant: DGPCameraView.sizeButton),
+            buttonFlash.widthAnchor.constraint(greaterThanOrEqualToConstant: DGPCameraView.sizeButton),
             buttonFlash.leadingAnchor.constraint(equalTo: previewContainer.leadingAnchor, constant: 10),
             buttonFlash.bottomAnchor.constraint(equalTo: previewContainer.bottomAnchor, constant: -10),
             
             //
             
-            buttonRotate.heightAnchor.constraint(equalToConstant: sizeButton),
-            buttonRotate.widthAnchor.constraint(greaterThanOrEqualToConstant: sizeButton),
+            buttonRotate.heightAnchor.constraint(equalToConstant: DGPCameraView.sizeButton),
+            buttonRotate.widthAnchor.constraint(greaterThanOrEqualToConstant: DGPCameraView.sizeButton),
             buttonRotate.trailingAnchor.constraint(equalTo: previewContainer.trailingAnchor, constant: -10),
             buttonRotate.bottomAnchor.constraint(equalTo: previewContainer.bottomAnchor, constant: -10),
             
@@ -113,12 +114,12 @@ class DGPCameraView : UIView {
         
         buttonFlash.isHidden = false
         buttonFlash.setImage(img, for: .normal)
-        applyDesignButtons(buttonFlash)
+        applyDesignButtons(buttonFlash, radius: DGPCameraView.sizeButton / 2)
     }
     
     func setButtonFlipCamera() {
         buttonRotate.setImage(UIImage(symbol: .cameraRotate), for: .normal)
-        applyDesignButtons(buttonRotate)
+        applyDesignButtons(buttonRotate, radius: DGPCameraView.sizeButton / 2)
     }
     
     func setButtonPhoto() {
