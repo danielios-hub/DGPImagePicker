@@ -74,6 +74,7 @@ class DGPLibraryViewCell: UICollectionViewCell {
         
         overlayView.alpha = 0
         imageView.contentMode = .scaleAspectFill
+        clipsToBounds = true
     }
     
     override func awakeFromNib() {
