@@ -43,8 +43,8 @@ class DGPMenu: UIView {
             containerStack.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             containerStack.heightAnchor.constraint(equalToConstant: defaultHeightToolbar),
             stackButtons.topAnchor.constraint(equalTo: containerStack.topAnchor),
-            stackButtons.leadingAnchor.constraint(equalTo: containerStack.leadingAnchor, constant: 10),
-            stackButtons.trailingAnchor.constraint(equalTo: containerStack.trailingAnchor, constant: -10),
+            stackButtons.leadingAnchor.constraint(equalTo: containerStack.leadingAnchor, constant: 15),
+            stackButtons.trailingAnchor.constraint(equalTo: containerStack.trailingAnchor, constant: -15),
             stackButtons.bottomAnchor.constraint(equalTo: containerStack.bottomAnchor),
             scrollView.topAnchor.constraint(equalTo: self.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
@@ -58,10 +58,6 @@ class DGPMenu: UIView {
         stackButtons.distribution = .equalSpacing
         stackButtons.alignment = .center
         containerStack.backgroundColor = .systemGroupedBackground
-        
-        
-        
-       
     }
     
     public func addButtons(buttonItems: [UIButton]) {

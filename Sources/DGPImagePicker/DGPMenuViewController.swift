@@ -92,7 +92,7 @@ internal class DGPMenuViewController: UIViewController {
         for (index, controller) in controllers.enumerated() {
             let button = UIButton(type: .custom)
             button.setTitle(controller.title, for: .normal)
-            button.titleLabel?.font = .boldSystemFont(ofSize: 14)
+            button.titleLabel?.font = .boldSystemFont(ofSize: 16)
             button.addTarget(self, action:  #selector(changeController(_:)), for: .touchDown)
             button.tag = index
             buttonItems.append(button)
