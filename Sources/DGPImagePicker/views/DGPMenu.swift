@@ -57,7 +57,7 @@ class DGPMenu: UIView {
         stackButtons.axis = .horizontal
         stackButtons.distribution = .equalSpacing
         stackButtons.alignment = .center
-        containerStack.backgroundColor = .red
+        containerStack.backgroundColor = .systemGroupedBackground
         
         
         
@@ -65,9 +65,9 @@ class DGPMenu: UIView {
     }
     
     public func addButtons(buttonItems: [UIButton]) {
-        stackButtons.subviews.forEach {
-            $0.removeFromSuperview()
-        }
+        //stackButtons.subviews.forEach {
+        //    $0.removeFromSuperview()
+        //}
         
         for buttonItem in buttonItems {
             buttonItem.setTitleColor(.black, for: .focused)
