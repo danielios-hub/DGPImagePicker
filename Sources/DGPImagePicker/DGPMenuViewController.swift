@@ -17,11 +17,19 @@ internal class DGPMenuViewController: UIViewController {
     weak var delegate: DGPMenuPageDelegate?
     public var controllers = [UIViewController]() { didSet { reload() } }
     
-    private var currentPage = 0
+    private var currentPage = 0 {
+        didSet {
+            for (i, button) in buttonItems.enumerated() {
+                button.isSelected = i == currentPage
+            }
+        }
+    }
     
     public var currentController : UIViewController {
         return controllers[currentPage]
     }
+    
+    private var buttonItems = [UIButton]()
     
     private var myView: DGPMenu {
         return view as! DGPMenu
@@ -79,10 +87,11 @@ internal class DGPMenuViewController: UIViewController {
             viewController.didMove(toParent: self)
         }
         
-        var buttonItems : [UIButton] = []
+        
         for (index, controller) in controllers.enumerated() {
             let button = UIButton(type: .system)
             button.setTitle(controller.title, for: .normal)
+            button.titleLabel?.font = .boldSystemFont(ofSize: 14)
             button.addTarget(self, action:  #selector(changeController(_:)), for: .touchDown)
             button.tag = index
             buttonItems.append(button)
@@ -92,7 +101,7 @@ internal class DGPMenuViewController: UIViewController {
         
     }
     
-    @objc func changeController(_ sender: UIBarButtonItem) {
+    @objc func changeController(_ sender: UIButton) {
         selectPage(sender.tag, scrollTo: true)
     }
 

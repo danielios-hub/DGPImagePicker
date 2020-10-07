@@ -65,16 +65,11 @@ class DGPMenu: UIView {
     }
     
     public func addButtons(buttonItems: [UIButton]) {
-        //stackButtons.subviews.forEach {
-        //    $0.removeFromSuperview()
-        //}
-        
         for buttonItem in buttonItems {
-            buttonItem.setTitleColor(.black, for: .focused)
+            buttonItem.setTitleColor(.black, for: .selected)
             buttonItem.setTitleColor(.lightGray, for: .normal)
             stackButtons.addArrangedSubview(buttonItem)
         }
-        
     }
 
     private func setupScrollView() {
