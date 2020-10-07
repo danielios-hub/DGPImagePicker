@@ -70,9 +70,10 @@ class DGPViewLibrary: UIView {
             assetZoomableView.topAnchor.constraint(equalTo: assetViewContainer.topAnchor),
             assetZoomableView.leadingAnchor.constraint(equalTo: assetViewContainer.leadingAnchor),
             assetZoomableView.trailingAnchor.constraint(equalTo: assetViewContainer.trailingAnchor),
+            assetZoomableView.bottomAnchor.constraint(equalTo: assetViewContainer.bottomAnchor),
+            
             //aspect ratio
             assetViewContainer.heightAnchor.constraint(equalTo: self.widthAnchor),
-            
             assetViewContainer.topAnchor.constraint(equalTo: self.topAnchor),
             assetViewContainer.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             assetViewContainer.trailingAnchor.constraint(equalTo: self.trailingAnchor),
@@ -106,6 +107,10 @@ class DGPViewLibrary: UIView {
         assetViewContainer.assetZoomView = assetZoomableView
         buttonExpand.isHidden = true
         buttonMultiple.isHidden = true
+        
+        collectionView.backgroundColor = .white
+        assetViewContainer.backgroundColor = .blue
+        assetZoomableView.backgroundColor = .yellow
     }
     
     public func setupButtons() {

@@ -69,9 +69,6 @@ class DGPLibraryViewCell: UICollectionViewCell {
             
         ])
         
-        addSubview(imageView)
-        addSubview(overlayView)
-        
         overlayView.alpha = 0
         imageView.contentMode = .scaleAspectFill
         clipsToBounds = true
