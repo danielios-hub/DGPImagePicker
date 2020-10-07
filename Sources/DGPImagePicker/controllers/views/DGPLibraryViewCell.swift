@@ -65,12 +65,12 @@ class DGPLibraryViewCell: UICollectionViewCell {
             checkmark.heightAnchor.constraint(equalToConstant: sizeButton),
             checkmark.trailingAnchor.constraint(equalTo: imageView.trailingAnchor),
             checkmark.bottomAnchor.constraint(equalTo: imageView.bottomAnchor),
-            
-            
         ])
         
         
         imageView.contentMode = .scaleAspectFill
+        checkmark.backgroundColor = .clear 
+        overlayView.backgroundColor = .white
         refreshSelection()
         clipsToBounds = true
     }

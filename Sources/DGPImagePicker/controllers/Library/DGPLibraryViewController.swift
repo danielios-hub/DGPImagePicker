@@ -42,7 +42,6 @@ class DGPLibraryViewController: UIViewController, DGPPermissionCheck {
     public override func loadView() {
         v = DGPViewLibrary(frame: .zero)
         view = v
-        v.setupButtons()
     }
     
     override func viewDidLoad() {

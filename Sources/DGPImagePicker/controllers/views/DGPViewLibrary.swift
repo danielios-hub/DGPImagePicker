@@ -107,6 +107,8 @@ class DGPViewLibrary: UIView {
         collectionView.backgroundColor = .red
         assetViewContainer.backgroundColor = .blue
         assetZoomableView.backgroundColor = .yellow
+        
+        setupButtons()
     }
     
     public func setupButtons() {
