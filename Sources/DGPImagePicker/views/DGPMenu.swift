@@ -35,7 +35,7 @@ class DGPMenu: UIView {
         addSubview(toolbar)
         
         NSLayoutConstraint.activate([
-            toolbar.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            toolbar.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
             toolbar.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             toolbar.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             toolbar.heightAnchor.constraint(equalToConstant: defaultHeightToolbar),
@@ -44,6 +44,8 @@ class DGPMenu: UIView {
             scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: toolbar.topAnchor)
         ])
+        
+        scrollView.backgroundColor = .red
     }
     
     public func addButtons(buttonItems: [UIBarButtonItem]) {
