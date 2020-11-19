@@ -19,8 +19,8 @@ class LibraryMediaManager {
     internal var numOffscreenAssetToCache = 60
     internal var cachedIndexed: [IndexPath] = []
     
-    //internal var exportTimer: Timer?
-    //internal var currentExportSessions: [AVAssetExportSession] = []
+    internal var exportTimer: Timer?
+    internal var currentExportSessions: [AVAssetExportSession] = []
     
     func initialize() {
         imageManager = PHCachingImageManager()
@@ -106,8 +106,7 @@ class LibraryMediaManager {
         imageManager?.stopCachingImages(for: assetsAtIndexPaths(indexesToStopCaching), targetSize: cellSize, contentMode: .aspectFill, options: PHCacheOptions())
     }
     
-    /*
-    func fetchVideoUrlAndCrop(for videoAsset: PHAsset, cropRect: CGRect, callback: @escaping (_ videoURL: URL?) -> Void) {
+    func fetchVideoUrlAndCrop(for videoAsset: PHAsset, callback: @escaping (_ videoURL: URL?) -> Void) {
         let videosOptions = PHVideoRequestOptions()
         videosOptions.isNetworkAccessAllowed = true
         videosOptions.deliveryMode = .highQualityFormat
@@ -139,13 +138,13 @@ class LibraryMediaManager {
                 
                 // Layer Instructions
                 let layerInstructions = AVMutableVideoCompositionLayerInstruction(assetTrack: videoCompositionTrack)
-                var transform = videoTrack.preferredTransform
-                let videoSize = videoTrack.naturalSize.applying(transform)
-                transform.tx = (videoSize.width < 0) ? abs(videoSize.width) : 0.0
-                transform.ty = (videoSize.height < 0) ? abs(videoSize.height) : 0.0
-                transform.tx -= cropRect.minX
-                transform.ty -= cropRect.minY
-                layerInstructions.setTransform(transform, at: CMTime.zero)
+//                var transform = videoTrack.preferredTransform
+//                let videoSize = videoTrack.naturalSize.applying(transform)
+//                transform.tx = (videoSize.width < 0) ? abs(videoSize.width) : 0.0
+//                transform.ty = (videoSize.height < 0) ? abs(videoSize.height) : 0.0
+//                transform.tx -= cropRect.minX
+//                transform.ty -= cropRect.minY
+//                layerInstructions.setTransform(transform, at: CMTime.zero)
                 
                 // CompositionInstruction
                 let mainInstructions = AVMutableVideoCompositionInstruction()
@@ -155,12 +154,11 @@ class LibraryMediaManager {
                 // Video Composition
                 let videoComposition = AVMutableVideoComposition(propertiesOf: asset)
                 videoComposition.instructions = [mainInstructions]
-                videoComposition.renderSize = cropRect.size // needed?
+                //videoComposition.renderSize = cropRect.size // needed?
                 
                 // 5. Configuring export session
 
-                let fileURL = URL(fileURLWithPath: NSTemporaryDirectory())
-                    .appendingUniquePathComponent(pathExtension: YPConfig.video.fileType.fileExtension)
+                var fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathExtension(DGPConfig.shared.video.fileType.fileExtension)
                 let exportSession = assetComposition
                     .export(to: fileURL,
                             videoComposition: videoComposition,
@@ -206,27 +204,26 @@ class LibraryMediaManager {
     }
     
     @objc func onTickExportTimer(sender: Timer) {
-        /*
         if let exportSession = sender.userInfo as? AVAssetExportSession {
             if let v = v {
                 if exportSession.progress > 0 {
-                    v.updateProgress(exportSession.progress)
+                    //v.updateProgress(exportSession.progress)
                 }
             }
             
             if exportSession.progress > 0.99 {
                 sender.invalidate()
-                v?.updateProgress(0)
+                //v?.updateProgress(0)
                 self.exportTimer = nil
             }
-        }*/
+        }
     }
     
     func forseCancelExporting() {
         for s in self.currentExportSessions {
             s.cancelExport()
         }
-    }*/
+    }
     
     func assetsAtIndexPaths(_ indexPaths: [IndexPath]) -> [PHAsset] {
         return indexPaths.map { index -> PHAsset in

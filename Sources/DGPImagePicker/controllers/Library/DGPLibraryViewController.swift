@@ -267,6 +267,15 @@ class DGPLibraryViewController: UIViewController, DGPPermissionCheck {
         mediaManager.imageManager?.fetchImage(for: asset, cropRect: cropRect, targetSize: ts, callback: callback)
     }
     
+    private func checkVideoLengthAndCrop(for asset: PHAsset,
+                                         withCropRect: CGRect? = nil,
+                                         callback: @escaping (_ videoURL: URL?) -> Void) {
+        
+            
+        
+        mediaManager.fetchVideoUrlAndCrop(for: asset, callback: callback)
+    }
+    
     public func selectedMedia(photoCallback: @escaping (_ photo: DGPMediaPhoto) -> Void,
                               videoCallback: @escaping (_ videoURL: DGPMediaVideo) -> Void,
                               multipleItemsCallback: @escaping (_ items: [DGPMediaType]) -> Void) {
@@ -330,20 +339,16 @@ class DGPLibraryViewController: UIViewController, DGPPermissionCheck {
                 case .audio, .unknown:
                     return
                 case .video:
-                    break
-                    /*
                     self.checkVideoLengthAndCrop(for: asset, callback: { videoURL in
                         DispatchQueue.main.async {
                             if let videoURL = videoURL {
-                                self.delegate?.libraryViewFinishedLoading()
-                                let video = YPMediaVideo(thumbnail: thumbnailFromVideoPath(videoURL),
-                                                         videoURL: videoURL, asset: asset)
+                               let video = DGPMediaVideo(url: videoURL, fromCamera: false, asset: asset)
                                 videoCallback(video)
                             } else {
                                 print("YPLibraryVC -> selectedMedia -> Problems with fetching videoURL.")
                             }
                         }
-                    })*/
+                    })
                 case .image:
                     self.fetchImageAndCrop(for: asset) { image, exifMeta in
                         DispatchQueue.main.async {
