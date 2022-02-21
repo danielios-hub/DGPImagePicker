@@ -18,14 +18,13 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(name: "DGPLibrary", url: "https://github.com/danielios-hub/DGPLibrary.git", .branch("master")),
-        //.package(name: "DGPExtensionCore", url: "https://daniel_ios@bitbucket.org/daniel_ios/dgpextensioncore.git", .branch("master")),
+        .package(name: "DGPExtensionCore", url: "https://github.com/danielios-hub/DGPExtensionCore.git", .branch("master")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "DGPImagePicker",
-            dependencies: ["DGPLibrary"]),
-//            dependencies: ["DGPLibrary", "DGPExtensionCore"]),
+            dependencies: ["DGPLibrary", "DGPExtensionCore"]),
     ]
 )
