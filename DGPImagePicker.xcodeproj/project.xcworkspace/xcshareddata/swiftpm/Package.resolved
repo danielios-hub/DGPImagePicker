@@ -3,19 +3,19 @@
     "pins": [
       {
         "package": "DGPExtensionCore",
-        "repositoryURL": "https://daniel_ios@bitbucket.org/daniel_ios/dgpextensioncore.git",
+        "repositoryURL": "https://github.com/danielios-hub/DGPExtensionCore",
         "state": {
           "branch": "master",
-          "revision": "02ad1000cfa621297a33352e28dbfd127c635974",
+          "revision": "4214a92263bd2b1b017f83138b8a05c8880cef9c",
           "version": null
         }
       },
       {
         "package": "DGPLibrary",
-        "repositoryURL": "https://daniel_ios@bitbucket.org/daniel_ios/dgplibrary.git",
+        "repositoryURL": "https://github.com/danielios-hub/DGPLibrary",
         "state": {
           "branch": "master",
-          "revision": "279ce15f5ee8707f91432d484ce5bbc57771abe7",
+          "revision": "6e058295c4c72ad1a38aaa1e687008336c72651a",
           "version": null
         }
       }

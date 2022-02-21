@@ -96,18 +96,16 @@ class DGPPhotoCapture : NSObject {
         self.previewView = previewView
         
         let blockOperation = BlockOperation { [weak self] in
-        
-        guard let strongSelf = self else {
-            return
-        }
-        
-        
-        if !strongSelf.isCaptureSessionSetup {
-            strongSelf.setupCaptureSession()
-        }
-        
-        strongSelf.startCamera(completion: completion)
+            guard let strongSelf = self else {
+                return
+            }
             
+            
+            if !strongSelf.isCaptureSessionSetup {
+                strongSelf.setupCaptureSession()
+            }
+            
+            strongSelf.startCamera(completion: completion)
         }
         
         blockOperation.queuePriority = .veryHigh

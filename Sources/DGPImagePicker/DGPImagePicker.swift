@@ -8,7 +8,6 @@
 
 import UIKit
 import DGPExtensionCore
-import DGPLibrary
 
 public protocol DGPImagePickerDelegate: class {
     func DGP_ImagePickerDidSelectItems(_ DGPImagePicker: DGPImagePicker,  items: [DGPMediaType])
